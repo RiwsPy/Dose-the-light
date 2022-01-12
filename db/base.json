@@ -1,0 +1,70 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.57 93a4d346",
+  "osm3s": {
+    "timestamp_osm_base": "2022-01-11T20:33:10Z",
+    "timestamp_areas_base": "2022-01-11T05:42:24Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "lat": 45.1798937,
+      "lon": 5.7023479,
+      "type": "node",
+      "id": 136459,
+      "tags": {
+        "highway": "motorway_junction",
+        "ref": "3b"
+      },
+      "properties": {
+        "cd_value": 0.4,
+        "conflicts": [
+          "motorway_junction"
+        ],
+        "ways": [],
+        "is_wet": false,
+        "lux_value": 5.714285714285714
+      }
+    },
+        {
+      "nodes": [
+        136459
+      ],
+      "type": "way",
+      "id": 4014599,
+      "tags": {
+        "highway": "secondary",
+        "maxspeed": "50",
+        "oneway": "yes",
+        "ref": "D 106G",
+        "source:maxspeed": "FR:urban"
+      },
+      "properties": {
+        "is_wet": false,
+        "is_snowy": false,
+        "coef_cd": 1.357421875,
+        "stopping_distance": 26.1920384951881,
+        "albedo": 0.07,
+        "lux_value": 19.39174107142857
+      }
+    },
+    {
+    "type": "relation",
+    "id": 12528038,
+    "members": [
+      {
+        "type": "way",
+        "ref": 4014599,
+        "role": "outer"
+      }
+    ],
+    "tags": {
+      "building": "college",
+      "building:levels": "3",
+      "building:part": "no",
+      "roof:shape": "flat",
+      "type": "multipolygon"
+      }
+    }
+  ]
+}

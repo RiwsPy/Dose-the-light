@@ -9,6 +9,7 @@ verify_ssl = true
 requests = "*"
 py-pytest = "*"
 pytest = "*"
+pytest-cov = "*"
 
 [requires]
 python_version = "3.8"

@@ -11,6 +11,7 @@ class f_node(f_entity):
     def __init__(self, *args, **kwargs):
         self.lat = 0.0
         self.lon = 0.0
+        self.type = 'node'
         self.ways = []
         super().__init__(*args, **kwargs)
 
@@ -46,6 +47,8 @@ class f_node(f_entity):
         return ret
 
     def is_open(self, date: str) -> bool:
+        if self.tags.get('amenity') in ('police', 'fire_station', 'hospital'):
+            return True
         date = date_check(date)
         opening_hours = self.opening_hours
         int_hour = hour_int(date.group('hour'))

@@ -1,8 +1,10 @@
 from . import Works
+from api_ext.osm import call
 
 
 class Conflicts(Works):
-    filename = 'conflicts.json'
+    filename = 'conflicts'
+    call_method = call
     check_radius = 30  # in meters
     query = \
         f"""
@@ -15,6 +17,16 @@ class Conflicts(Works):
         );
         (._;>;);
         """
+    highway_without_conflicts = ('traffic_signals',)
 
-    def find(self, date: str):
-        pass
+    def node_conflicts(self, node) -> bool:
+        conflict = node.tags.get('highway')
+        return conflict and conflict not in self.highway_without_conflicts or len(set(node.ways)) >= 3
+
+    def output(self):
+        new_f = self.__class__()
+        new_f.extend(
+            [obj
+             for obj in self
+             if obj.type == 'node' and self.node_conflicts(obj)])
+        new_f.dump(self.filename + '_output')

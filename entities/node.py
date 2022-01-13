@@ -3,12 +3,12 @@ from typing import Tuple
 from .position import Position
 import re
 from typing import Dict
+from .time import date_check, time_slot_int, hour_int
 
 days = ('Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su')
 regex_data_day = re.compile(r'; *')
 regex_days = re.compile(r'(Mo|Tu|We|Th|Fr|Sa|Su)(-|, )?(Mo|Tu|We|Th|Fr|Sa|Su)?')
 regex_hours = re.compile(r'\d\d:\d\d-\d\d:\d\d')
-regex_date = re.compile(r'(?P<day>Mo|Tu|We|Th|Fr|Sa|Su) (?P<hour>\d\d:\d\d)')
 regex_time_slot = re.compile(r'(?P<h1>\d\d):(?P<m1>\d\d)-(?P<h2>\d\d):(?P<m2>\d\d)')
 
 
@@ -16,6 +16,7 @@ class f_node(f_entity):
     def __init__(self, *args, **kwargs):
         self.lat = 0.0
         self.lon = 0.0
+        self.ways = []
         super().__init__(*args, **kwargs)
 
     @property
@@ -61,6 +62,7 @@ class f_node(f_entity):
         return not opening_hours
 
     def in_rush_hour(self, date: str) -> bool:
+        # TODO: gestion des heures +1/-1 incorrectes sur des horaires proches de minuit
         date = date_check(date)
         opening_hours = self.opening_hours
         if not opening_hours or date.group('day') not in opening_hours:
@@ -94,35 +96,3 @@ def default_opening_hours(string: str = '') -> dict:
     return {
         day: [string]
         for day in days}
-
-
-regex_time_slot = re.compile(r'(?P<d1>\d\d:\d\d)-(?P<d2>\d\d:\d\d)')
-
-
-def time_slot_int(time_slot: str) -> tuple:
-    """
-        time_slot: HH:MM-HH:MM
-    """
-    time_slot = regex_time_slot.fullmatch(time_slot)
-    return hour_int(time_slot.group('d1')), hour_int(time_slot.group('d2'))
-
-
-def hour_int(hour: str) -> float:
-    """
-        hour: HH:MM
-    """
-    h, sep, m = hour.partition(':')
-    if not sep:
-        raise AttributeError
-    return int(h)+int(m)/60
-
-
-def date_check(date: str):
-    """
-        date: DD HH:MM
-    """
-    date = regex_date.fullmatch(date)
-    if not date:
-        print(f"Paramètre hour incorrect {date}")
-        raise AttributeError
-    return date

@@ -9,10 +9,10 @@ class f_entity(f_base):
     def __init__(self, **kwargs) -> None:
         self.tags = {}
         self.owner = None
-        self.properties = {}
         for k, v in kwargs.items():
             setattr(self, k, v)
 
+    """
     @property
     def properties(self):
         return self.tags['properties']
@@ -20,6 +20,7 @@ class f_entity(f_base):
     @properties.setter
     def properties(self, value) -> None:
         self.tags['properties'] = value
+    """
 
     @property
     def name(self) -> str:

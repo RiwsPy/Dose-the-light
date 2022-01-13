@@ -22,7 +22,7 @@ def test_extend(setUp):
 
 
 def test_load(setUp):
-    setUp.load('base.json')
+    setUp.load('base')
     node = setUp.elements[0]
     assert node.id == 136459
     way = setUp.elements[1]
@@ -32,5 +32,5 @@ def test_load(setUp):
     assert way in relation.ways
 
     clone = setUp.__dict__.copy()
-    setUp.load('base.json', 'empty.json')
+    setUp.load('base', 'empty')
     assert clone == setUp.__dict__

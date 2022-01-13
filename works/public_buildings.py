@@ -8,7 +8,7 @@ class Public_buildings(Works):
     filename = 'public_building'
     call_method = call
     query = \
-        f"""
+        """
         (
             nwr(area.city)[amenity=kindergarten];
             nwr(area.city)[amenity=childcare];

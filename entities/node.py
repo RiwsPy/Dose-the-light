@@ -5,6 +5,7 @@ import re
 from typing import Dict
 from .time import date_check, time_slot_int, hour_int, \
     regex_days, regex_hours, days, regex_data_day
+from .time import building_opening_hours
 
 
 class f_node(f_entity):
@@ -27,7 +28,7 @@ class f_node(f_entity):
     def opening_hours(self) -> Dict[str, list]:
         opening_hours = self.tags.get('opening_hours')
         if not opening_hours:
-            return {}
+            return self.special_opening_hours()
 
         ret = default_opening_hours()
         for opening_days in re.split(regex_data_day, opening_hours):
@@ -45,6 +46,19 @@ class f_node(f_entity):
                             break
 
         return ret
+
+    def special_opening_hours(self) -> dict:
+        if self.tags.get('amenity') == 'school':
+            return building_opening_hours.school
+        elif self.tags.get('amenity') == 'college':
+            return building_opening_hours.college
+        elif self.tags.get('public_transport') == 'stop_position' and self.tags.get('bus') == "yes":
+            return building_opening_hours.bus_station
+        elif self.tags.get('railway') == "yes":
+            return building_opening_hours.tram_station
+        elif self.tags.get('amenity') in ('childcare', 'kindergarten'):
+            return building_opening_hours.childcare
+        return {}
 
     def is_open(self, date: str) -> bool:
         if self.tags.get('amenity') in ('police', 'fire_station', 'hospital'):

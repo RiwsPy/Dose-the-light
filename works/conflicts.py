@@ -23,10 +23,5 @@ class Conflicts(Works):
         conflict = node.tags.get('highway')
         return conflict and conflict not in self.highway_without_conflicts or len(set(node.ways)) >= 3
 
-    def output(self):
-        new_f = self.__class__()
-        new_f.extend(
-            [obj
-             for obj in self
-             if obj.type == 'node' and self.node_conflicts(obj)])
-        new_f.dump(self.filename + '_output')
+    def _can_be_output(self, obj) -> bool:
+        return obj.type == 'node' and self.node_conflicts(obj)

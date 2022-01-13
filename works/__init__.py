@@ -26,3 +26,14 @@ class Works(f_osm):
             super().load(filename)
         elif type(filename) is tuple:
             super().load(*filename)
+
+    def output(self, filename=''):
+        new_f = self.__class__()
+        new_f.extend(
+            [obj
+             for obj in self
+             if self._can_be_output(obj)])
+        new_f.dump(filename or self.filename + '_output')
+
+    def _can_be_output(*args, **kwargs) -> bool:
+        return True

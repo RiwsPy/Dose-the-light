@@ -3,13 +3,8 @@ from typing import Tuple
 from .position import Position
 import re
 from typing import Dict
-from .time import date_check, time_slot_int, hour_int
-
-days = ('Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su')
-regex_data_day = re.compile(r'; *')
-regex_days = re.compile(r'(Mo|Tu|We|Th|Fr|Sa|Su)(-|, )?(Mo|Tu|We|Th|Fr|Sa|Su)?')
-regex_hours = re.compile(r'\d\d:\d\d-\d\d:\d\d')
-regex_time_slot = re.compile(r'(?P<h1>\d\d):(?P<m1>\d\d)-(?P<h2>\d\d):(?P<m2>\d\d)')
+from .time import date_check, time_slot_int, hour_int, \
+    regex_days, regex_hours, days, regex_data_day
 
 
 class f_node(f_entity):
@@ -77,6 +72,7 @@ class f_node(f_entity):
         return False
 
     def coef_rush(self, date: str) -> int:
+        # TODO: 1 même entre midi et 14h en cas de fermeture
         date_check(date)
         if self.in_rush_hour(date):
             return 3

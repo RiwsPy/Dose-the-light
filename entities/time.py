@@ -2,8 +2,13 @@ import datetime
 import re
 
 
+regex_days = re.compile(r'(Mo|Tu|We|Th|Fr|Sa|Su)(-|, )?(Mo|Tu|We|Th|Fr|Sa|Su)?')
+regex_hours = re.compile(r'\d\d:\d\d-\d\d:\d\d')
 regex_date = re.compile(r'(?P<day>Mo|Tu|We|Th|Fr|Sa|Su) (?P<hour>\d\d:\d\d)')
 regex_time_slot = re.compile(r'(?P<d1>\d\d:\d\d)-(?P<d2>\d\d:\d\d)')
+days = ('Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su')
+regex_data_day = re.compile(r'; *')
+# regex_time_slot = re.compile(r'(?P<h1>\d\d):(?P<m1>\d\d)-(?P<h2>\d\d):(?P<m2>\d\d)')
 
 
 def time_slot_int(time_slot: str) -> tuple:

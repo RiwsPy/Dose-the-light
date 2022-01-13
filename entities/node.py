@@ -16,12 +16,3 @@ class f_node(f_entity):
     @position.setter
     def position(self, position: Tuple[float]) -> None:
         self.lat, self.lon = Position(position)
-
-    @property
-    def __dict__(self):
-        cpy = super().__dict__.copy()
-        try:
-            del cpy['owner']
-        except KeyError:
-            pass
-        return cpy

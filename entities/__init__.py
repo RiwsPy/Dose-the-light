@@ -1,4 +1,8 @@
-class f_entity(int):
+class f_base(int):
+    pass
+
+
+class f_entity(f_base):
     def __new__(cls, **kwargs):
         return super().__new__(cls, kwargs['id'])
 
@@ -24,3 +28,12 @@ class f_entity(int):
     @name.setter
     def name(self, value: str) -> None:
         self.tags['name'] = value
+
+    @property
+    def __dict__(self):
+        cpy = super().__dict__.copy()
+        try:
+            del cpy['owner']
+        except KeyError:
+            pass
+        return cpy

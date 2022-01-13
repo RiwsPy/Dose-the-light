@@ -30,3 +30,7 @@ def test_load(setUp):
     relation = setUp.elements[2]
     assert node in relation.nodes
     assert way in relation.ways
+
+    clone = setUp.__dict__.copy()
+    setUp.load('base.json', 'empty.json')
+    assert clone == setUp.__dict__

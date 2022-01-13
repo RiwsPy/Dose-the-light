@@ -39,12 +39,6 @@ class f_osm:
             json.dump(cpy, file, ensure_ascii=ensure_ascii, indent=indent)
 
     def load(self, *args: str) -> None:
-        convert_type = {
-            'node': f_node,
-            'way': f_way,
-            'relation': f_relation,
-        }
-
         for index, filename in enumerate(args):
             with open('db/' + filename, 'r') as file:
                 if index:
@@ -52,6 +46,19 @@ class f_osm:
                 else:
                     for k, v in json.load(file).items():
                         setattr(self, k, v)
+        self._rootinage()
+
+    def loads(self, data: dict) -> None:
+        for k, v in data.items():
+            setattr(self, k, v)
+        self._rootinage()
+
+    def _rootinage(self) -> None:
+        convert_type = {
+            'node': f_node,
+            'way': f_way,
+            'relation': f_relation,
+        }
 
         self.elements = [
             convert_type[elt['type']](**elt, owner=self)

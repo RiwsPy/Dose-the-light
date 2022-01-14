@@ -15,6 +15,9 @@ class base:
     def __iter__(self):
         yield from getattr(self, self.data_attr)
 
+    def __getitem__(self, value: int) -> Any:
+        return getattr(self, self.data_attr)[getattr(self, self.data_attr).index(value)]
+
     def append(self, value: Any) -> None:
         getattr(self, self.data_attr).append(value)
 

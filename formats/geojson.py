@@ -19,13 +19,13 @@ class f_geojson(base):
         for elt in self:
             if elt['geometry']['type'] == 'Point':
                 new_item = f_node(id=f.create_unique_id())
+                new_item.tags = elt['properties']
                 new_item.type = 'node'
+                new_item.tags.update(elt['properties'])
                 new_item.lat = elt['geometry']['coordinates'][1]
                 new_item.lon = elt['geometry']['coordinates'][0]
+                f.append(new_item)
             else:
                 print(elt['geometry']['type'], 'unknown')
-                continue
 
-            new_item.tags.update(elt['properties'])
-            f.append(new_item)
         return f

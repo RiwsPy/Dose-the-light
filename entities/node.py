@@ -52,6 +52,8 @@ class f_node(f_entity):
             return building_opening_hours.school
         elif self.tags.get('amenity') == 'college':
             return building_opening_hours.college
+        elif self.tags.get('landuse') == 'residential':
+            return building_opening_hours.residential
         elif self.tags.get('public_transport') == 'stop_position' and self.tags.get('bus') == "yes":
             return building_opening_hours.bus_station
         elif self.tags.get('railway') == "yes":
@@ -77,14 +79,21 @@ class f_node(f_entity):
         # TODO: gestion des heures +1/-1 incorrectes sur des horaires proches de minuit
         date = date_check(date)
         opening_hours = self.opening_hours
-        if not opening_hours or date.group('day') not in opening_hours:
+        if not opening_hours or date.group('day') not in opening_hours or not opening_hours[date.group('day')]:
             return False
-        date_hour = hour_int(date.group('hour'))
-        for opening_hour in opening_hours[date.group('day')]:
-            h_min, h_max = time_slot_int(opening_hour)
-            if h_min - 1 <= date_hour < h_min + 1 or\
-                    h_max - 1 <= date_hour < h_max + 1:
-                return True
+        int_hour = hour_int(date.group('hour'))
+        time_min = time_slot_int(opening_hours[date.group('day')][0])[0]
+        time_max = time_slot_int(opening_hours[date.group('day')][-1])[-1]
+
+        if time_min == 0 and time_max == 24:  # 24/7
+            return False
+        elif self.tags.get('landuse') == 'residential' and\
+                (time_min - 1 <= int_hour < time_min + 2 or\
+                 time_max - 2 <= int_hour < time_max + 1):
+            return True
+        elif time_min - 1 <= int_hour < time_min + 1 or \
+                time_max - 1 <= int_hour < time_max + 1:
+            return True
 
         return False
 
@@ -92,6 +101,8 @@ class f_node(f_entity):
         # TODO: 1 même entre midi et 14h en cas de fermeture
         date_check(date)
         if self.in_rush_hour(date):
+            if self.tags.get('landuse') == "residential":
+                return 5
             return 3
         if self.is_open(date):
             if self.tags.get('shop') == 'supermarket':

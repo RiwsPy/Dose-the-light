@@ -57,6 +57,15 @@ class building_opening_hours:
         'Sa': [],
         'Su': [],
     }
+    residential = {
+        'Mo': ['07:00-19:00'],
+        'Tu': ['07:00-19:00'],
+        'We': ['07:00-19:00'],
+        'Th': ['07:00-19:00'],
+        'Fr': ['07:00-19:00'],
+        'Sa': ['07:00-19:00'],
+        'Su': ['07:00-12:00'],
+    }
 
 
 def time_slot_int(time_slot: str) -> tuple:

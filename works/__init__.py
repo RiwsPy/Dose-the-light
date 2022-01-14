@@ -8,12 +8,15 @@ class Works(f_osm):
     filename = "empty.json"
     call_method = call
 
+    def __len__(self) -> int:
+        return len(self.elements)
+
     def update(self, filename=''):
         ret = self.call_method(self.query)
-        if ret.get('features'):  # geojson
+        if ret.get('features') is not None:  # geojson
             f = f_geojson()
             f = f.load_and_create_osm(ret)
-        elif ret.get('elements'):  # osm
+        elif ret.get('elements') is not None:  # osm
             f = f_osm()
             f.loads(ret)
         else:
@@ -35,5 +38,5 @@ class Works(f_osm):
              if self._can_be_output(obj)])
         new_f.dump(filename or self.filename + '_output')
 
-    def _can_be_output(*args, **kwargs) -> bool:
+    def _can_be_output(*args) -> bool:
         return True

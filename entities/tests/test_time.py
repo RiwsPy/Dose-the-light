@@ -9,8 +9,11 @@ def test_date_check():
 
     with pytest.raises(AttributeError):
         date_check('PP 09:00')
+    with pytest.raises(AttributeError):
         date_check('Mo 09:0')
+    with pytest.raises(AttributeError):
         date_check('Mo 9:00')
+    with pytest.raises(AttributeError):
         date_check('Mo 09h00')
 
 
@@ -21,6 +24,7 @@ def test_time_slot_int():
 
     with pytest.raises(AttributeError):
         time_slot_int('09:00')
+    with pytest.raises(AttributeError):
         time_slot_int('09:00-10')
 
 

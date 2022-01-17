@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 from formats.osm import f_osm
 from entities.node import f_node
+from entities.way import f_way
 from works.conflicts import Conflicts
 from works.worksites import Worksites
 from works.opening_hours import Opening_hours
@@ -71,7 +72,8 @@ def full_output():
 
 
 if __name__ == '__main__':
-    #w = Conflicts()
-    #w.load()
-    #w.output()
-    show_conflicts('Tu 08:00')
+    w = Public_buildings()
+    w.load()
+    w.output()
+    #show_conflicts('Tu 08:00')
+    pass

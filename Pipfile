@@ -10,6 +10,9 @@ requests = "*"
 py-pytest = "*"
 pytest = "*"
 pytest-cov = "*"
+django = "*"
+python-dotenv = "*"
+django-leaflet = "*"
 
 [requires]
 python_version = "3.8"

@@ -21,8 +21,8 @@ class f_node(f_entity):
         return Position((self.lat, self.lon))
 
     @position.setter
-    def position(self, position: Tuple[float]) -> None:
-        self.lat, self.lon = Position(position)
+    def position(self, position: Position) -> None:
+        self.lat, self.lon = position
 
     @property
     def opening_hours(self) -> Dict[str, list]:

@@ -4,6 +4,10 @@ import json
 from entities.node import f_node
 from entities.way import f_way
 from entities.relation import f_relation
+from pathlib import Path
+import os
+
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 class base:
@@ -28,7 +32,7 @@ class base:
              filename: str,
              ensure_ascii: bool = False,
              indent: int = 2) -> None:
-        with open('db/' + filename + '.json', 'w') as file:
+        with open(os.path.join(BASE_DIR, 'db/' + filename + '.json'), 'w') as file:
             cpy = self.__dict__.copy()
             cpy[self.data_attr] = [
                 obj.__dict__
@@ -37,7 +41,7 @@ class base:
 
     def load(self, *args: str) -> None:
         for index, filename in enumerate(args):
-            with open('db/' + filename + '.json', 'r') as file:
+            with open(os.path.join(BASE_DIR, 'db/' + filename + '.json'), 'r') as file:
                 if index:
                     self.extend(json.load(file)[self.data_attr])
                 else:

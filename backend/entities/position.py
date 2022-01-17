@@ -1,20 +1,27 @@
-from typing import Tuple
 from itertools import zip_longest
 import math
+from django.contrib.gis.geos import Point
 
 
-class Position(Tuple[float]):
+class Position(Point):
     default_pos = 0.0
 
-    def __add__(self, other) -> 'Position':
-        return self.__class__(
-            pos1+pos2
-            for pos1, pos2 in zip_longest(self, other, fillvalue=self.default_pos))
+    def __iter__(self):
+        yield from self.coords
 
-    def __truediv__(self, other) -> 'Position':
-        return self.__class__(
-            pos/other for pos in self
+    def __add__(self, other) -> 'Position':
+        return self.__class__([
+            pos1+pos2
+            for pos1, pos2 in zip_longest(self, other, fillvalue=self.default_pos)])
+    __iadd__ = __add__
+
+    def __truediv__(self, other: float) -> 'Position':
+        return self.__class__([
+            pos/other for pos in self]
         )
+
+    def __eq__(self, other) -> bool:
+        return self.coords == getattr(other, 'coords', other)
 
     def distance(self, other) -> float:
         rm = 6371000  # Earth radius (meters)

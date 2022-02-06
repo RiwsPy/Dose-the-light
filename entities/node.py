@@ -1,20 +1,17 @@
 from . import f_entity
-from typing import Tuple
 from .position import Position
-import re
-from typing import Dict
-from .time import date_check, time_slot_int, hour_int, \
-    regex_days, regex_hours, days, regex_data_day
+from typing import Dict, Any
+from .time import date_check, time_slot_int, hour_int, Opening_hours
 from .time import building_opening_hours
 
 
 class f_node(f_entity):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         self.lat = 0.0
         self.lon = 0.0
         self.type = 'node'
         self.ways = []
-        super().__init__(*args, **kwargs)
+        super().__init__(**kwargs)
 
     @property
     def position(self) -> Position:
@@ -25,48 +22,32 @@ class f_node(f_entity):
         self.lat, self.lon = position
 
     @property
-    def opening_hours(self) -> Dict[str, list]:
-        opening_hours = self.tags.get('opening_hours')
-        if not opening_hours:
+    def _opening_hours(self) -> Dict[str, list]:
+        if not self.opening_hours:
             return self.special_opening_hours()
 
-        ret = default_opening_hours()
-        for opening_days in re.split(regex_data_day, opening_hours):
-            days_data = regex_days.findall(opening_days)
-            hours_data = regex_hours.findall(opening_days)
-            if not days_data or not hours_data:
-                continue
-            for day_beg, sep, day_end in days_data:
-                found = False
-                for day in ret:
-                    if found or day == day_beg:
-                        found = True
-                        ret[day].extend(hours_data)
-                        if not day_end or day == day_end:
-                            break
-
-        return ret
+        return Opening_hours(self.opening_hours).__dict__
 
     def special_opening_hours(self) -> dict:
-        if self.tags.get('amenity') == 'school':
+        if self.amenity == 'school':
             return building_opening_hours.school
-        elif self.tags.get('amenity') == 'college':
+        elif self.amenity == 'college':
             return building_opening_hours.college
-        elif self.tags.get('landuse') == 'residential':
+        elif self.landuse == 'residential':
             return building_opening_hours.residential
-        elif self.tags.get('public_transport') == 'stop_position' and self.tags.get('bus') == "yes":
+        elif self.public_transport == 'stop_position' and self.bus == "yes":
             return building_opening_hours.bus_station
-        elif self.tags.get('railway') == "yes":
+        elif self.railway == "yes":
             return building_opening_hours.tram_station
-        elif self.tags.get('amenity') in ('childcare', 'kindergarten'):
+        elif self.amenity in ('childcare', 'kindergarten'):
             return building_opening_hours.childcare
         return {}
 
     def is_open(self, date: str) -> bool:
-        if self.tags.get('amenity') in ('police', 'fire_station', 'hospital'):
+        if self.amenity in ('police', 'fire_station', 'hospital'):
             return True
         date = date_check(date)
-        opening_hours = self.opening_hours
+        opening_hours = self._opening_hours
         int_hour = hour_int(date.group('hour'))
         for opening_hour in opening_hours.get(date.group('day'), []):
             time_min, time_max = time_slot_int(opening_hour)
@@ -78,7 +59,7 @@ class f_node(f_entity):
     def in_rush_hour(self, date: str) -> bool:
         # TODO: gestion des heures +1/-1 incorrectes sur des horaires proches de minuit
         date = date_check(date)
-        opening_hours = self.opening_hours
+        opening_hours = self._opening_hours
         if not opening_hours or date.group('day') not in opening_hours or not opening_hours[date.group('day')]:
             return False
         int_hour = hour_int(date.group('hour'))
@@ -87,8 +68,8 @@ class f_node(f_entity):
 
         if time_min == 0 and time_max == 24:  # 24/7
             return False
-        elif self.tags.get('landuse') == 'residential' and\
-                (time_min - 1 <= int_hour < time_min + 2 or\
+        elif self.landuse == 'residential' and\
+                (time_min - 1 <= int_hour < time_min + 2 or
                  time_max - 2 <= int_hour < time_max + 1):
             return True
         elif time_min - 1 <= int_hour < time_min + 1 or \
@@ -101,22 +82,11 @@ class f_node(f_entity):
         # TODO: 1 même entre midi et 14h en cas de fermeture
         date_check(date)
         if self.in_rush_hour(date):
-            if self.tags.get('landuse') == "residential":
+            if self.landuse == "residential":
                 return 5
             return 3
         if self.is_open(date):
-            if self.tags.get('shop') == 'supermarket':
+            if self.shop == 'supermarket':
                 return 2
             return 1
         return 0
-
-
-def default_opening_hours(string: str = '') -> dict:
-    if string == '':
-        return {
-            day: []
-            for day in days}
-
-    return {
-        day: [string]
-        for day in days}

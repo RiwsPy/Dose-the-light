@@ -1,9 +1,8 @@
 #!/usr/bin/env python
-from formats.osm import f_osm
-from entities.node import f_node
-from entities.way import f_way
-from works.conflicts import Conflicts
-from works.worksites import Worksites
+from formats import f_osm
+from entities import f_node
+from works import Conflicts
+from works import Worksites
 from works.opening_hours import Opening_hours
 from works.public_buildings import Public_buildings
 from works.residentials import Residentials
@@ -34,7 +33,7 @@ def show_conflicts(date: str):
     f = f_osm()
     nb = 0
     for conflict in cf:
-        if conflict.opening_hours and not conflict.is_open(date):
+        if conflict._opening_hours and not conflict.is_open(date):
             continue
         f.append(conflict)
         nb_activation = 0
@@ -72,8 +71,8 @@ def full_output():
 
 
 if __name__ == '__main__':
-    w = Public_buildings()
-    w.load()
-    w.output()
-    #show_conflicts('Tu 08:00')
+    #w = Public_buildings()
+    #w.load()
+    #w.output()
+    show_conflicts('Tu 08:00')
     pass

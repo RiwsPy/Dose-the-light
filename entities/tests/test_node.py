@@ -19,9 +19,9 @@ def test_node_position():
 
 def test_opening_hours():
     node = f_node(id=0)
-    assert not node.opening_hours
+    assert not node._opening_hours
     node.tags['opening_hours'] = 'Mo 09:00-14:00'
-    assert node.opening_hours == {
+    assert node._opening_hours == {
         'Mo': ['09:00-14:00'],
         'Tu': [],
         'We': [],
@@ -34,7 +34,7 @@ def test_opening_hours():
 
 def test_is_open():
     node = f_node(id=0)
-    assert not node.opening_hours
+    assert not node._opening_hours
     node.tags['opening_hours'] = 'Mo 09:00-14:00'
     assert node.is_open('Mo 10:00')
     assert not node.is_open('Tu 10:00')

@@ -1,5 +1,6 @@
 import datetime
 import re
+from typing import Dict
 
 
 regex_days = re.compile(r'(Mo|Tu|We|Th|Fr|Sa|Su)(-|, )?(Mo|Tu|We|Th|Fr|Sa|Su)?')
@@ -97,7 +98,7 @@ def date_check(date: str):
     return date
 
 
-def date_to_int(date: str) -> int:
+def date_to_int(date: str) -> datetime:
     """
         date: YYYY-MM-DD
     """
@@ -106,3 +107,35 @@ def date_to_int(date: str) -> int:
 
 def now():
     return datetime.datetime(datetime.datetime.now().year, datetime.datetime.now().month, datetime.datetime.now().day)
+
+
+class Opening_hours(str):
+    @property
+    def __dict__(self) -> Dict[str, list]:
+        ret = default_opening_hours()
+        for opening_days in re.split(regex_data_day, self):
+            days_data = regex_days.findall(opening_days)
+            hours_data = regex_hours.findall(opening_days)
+            if not days_data or not hours_data:
+                continue
+            for day_beg, sep, day_end in days_data:
+                found = False
+                for day in ret:
+                    if found or day == day_beg:
+                        found = True
+                        ret[day].extend(hours_data)
+                        if not day_end or day == day_end:
+                            break
+
+        return ret
+
+
+def default_opening_hours(string: str = '') -> dict:
+    if not string:
+        return {
+            day: []
+            for day in days}
+
+    return {
+        day: [string]
+        for day in days}

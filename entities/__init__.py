@@ -1,3 +1,6 @@
+from typing import Any
+
+
 class f_base(int):
     pass
 
@@ -12,23 +15,8 @@ class f_entity(f_base):
         for k, v in kwargs.items():
             setattr(self, k, v)
 
-    """
-    @property
-    def properties(self):
-        return self.tags['properties']
-
-    @properties.setter
-    def properties(self, value) -> None:
-        self.tags['properties'] = value
-    """
-
-    @property
-    def name(self) -> str:
-        return self.tags.get('name', '')
-
-    @name.setter
-    def name(self, value: str) -> None:
-        self.tags['name'] = value
+    def __getattr__(self, attr) -> Any:
+        return self.tags.get(attr)
 
     @property
     def __dict__(self):

@@ -7,7 +7,7 @@ from entities.relation import f_relation
 from pathlib import Path
 import os
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 class base:

@@ -10,6 +10,7 @@ class Worksites(Works):
 
     @staticmethod
     def node_is_open_and_trouble(node) -> bool:
+        # TODO: rajouter une contrainte spaciale
         begin_date = date_to_int(node.tags['Datedebtravaux'])
         end_date = date_to_int(node.tags['Datefintravaux'])
         return node.tags['ImpactCirculation'] and begin_date <= now() <= end_date

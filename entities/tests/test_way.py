@@ -3,7 +3,7 @@ from ..node import f_node
 
 
 def test_create():
-    way = f_way(id=0, nodes=[])
+    way = f_way(id=1, nodes=[])
     assert not way.position.coords
 
     new_node = f_node(id=1)

@@ -23,7 +23,7 @@ class f_geojson(base):
                 new_item.type = 'node'
                 new_item.tags.update(elt['properties'])
                 new_item.lat = elt['geometry']['coordinates'][1]
-                new_item.lon = elt['geometry']['coordinates'][0]
+                new_item.lng = elt['geometry']['coordinates'][0]
                 f.append(new_item)
             else:
                 print(elt['geometry']['type'], 'unknown')

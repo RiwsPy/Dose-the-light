@@ -7,7 +7,7 @@ regex_days = re.compile(r'(Mo|Tu|We|Th|Fr|Sa|Su)(-|, )?(Mo|Tu|We|Th|Fr|Sa|Su)?')
 regex_hours = re.compile(r'\d\d:\d\d-\d\d:\d\d')
 regex_date = re.compile(r'(?P<day>Mo|Tu|We|Th|Fr|Sa|Su) (?P<hour>\d\d:\d\d)')
 regex_time_slot = re.compile(r'(?P<d1>\d\d:\d\d)-(?P<d2>\d\d:\d\d)')
-days = ('Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su')
+days = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su']
 regex_data_day = re.compile(r'; *')
 # regex_time_slot = re.compile(r'(?P<h1>\d\d):(?P<m1>\d\d)-(?P<h2>\d\d):(?P<m2>\d\d)')
 
@@ -87,7 +87,20 @@ def hour_int(hour: str) -> float:
     return int(h)+int(m)/60
 
 
-def date_check(date: str):
+def date_percent_in_week(date: str) -> float:
+    """
+        date: DD HH:MM
+    """
+    date = date_check(date)
+    date_percent = 100/7 * days.index(date.group('day'))
+
+    nb_hour = int(date.group('hour').partition(':')[0])
+    date_percent += 100/7/24 * nb_hour
+
+    return date_percent
+
+
+def date_check(date: str) -> re.Match:
     """
         date: DD HH:MM
     """

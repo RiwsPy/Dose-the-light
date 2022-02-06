@@ -1,5 +1,5 @@
 import pytest
-from ..node import date_check, time_slot_int, hour_int
+from ..time import date_check, time_slot_int, hour_int, date_percent_in_week
 
 
 def test_date_check():
@@ -36,3 +36,9 @@ def test_hour_int():
 
     with pytest.raises(AttributeError):
         hour_int('09h00')
+
+
+def test_date_percent_in_week():
+    assert date_percent_in_week('Mo 00:00') == 0.0
+    assert date_percent_in_week('Mo 08:00') == 4.761904761904762
+    assert date_percent_in_week('Su 24:00') == 100.0

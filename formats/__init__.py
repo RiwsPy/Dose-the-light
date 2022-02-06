@@ -1,9 +1,8 @@
 from typing import Any
-import random
 import json
-from entities.node import f_node
-from entities.way import f_way
-from entities.relation import f_relation
+from ..entities.node import f_node, f_node_geojson
+from ..entities.way import f_way
+from ..entities.relation import f_relation
 from pathlib import Path
 import os
 
@@ -12,6 +11,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 class base:
     data_attr = 'elements'
+    convert_type = {
+        'node': f_node,
+        'way': f_way,
+        'relation': f_relation,
+        'Point': f_node_geojson,
+    }
+    ID = 1000000
 
     def __init__(self):
         setattr(self, self.data_attr, [])
@@ -39,6 +45,13 @@ class base:
                 for obj in cpy[self.data_attr]]
             json.dump(cpy, file, ensure_ascii=ensure_ascii, indent=indent)
 
+    def dumps(self) -> 'base':
+        other = self.__class__()
+        other.extend([
+            obj.__dict__
+            for obj in self])
+        return other
+
     def load(self, *args: str) -> None:
         for index, filename in enumerate(args):
             with open(os.path.join(BASE_DIR, 'db/' + filename + '.json'), 'r') as file:
@@ -54,22 +67,22 @@ class base:
             setattr(self, k, v)
         self._rootinage()
 
-    def create_unique_id(self) -> int:
-        nb = 1000000
-        while nb in self:
-            nb = random.randint(1000001, 10000000)
-        return nb
+    @classmethod
+    def create_unique_id(cls) -> int:
+        cls.ID += 1
+        return cls.ID
 
     def _rootinage(self) -> None:
-        convert_type = {
-            'node': f_node,
-            'way': f_way,
-            'relation': f_relation,
-        }
-        setattr(self, self.data_attr, [
-            convert_type[elt['type']](**elt, owner=self)
-            for index, elt in enumerate(self)
-        ])
+        if self.data_attr == 'elements':
+            setattr(self, self.data_attr, [
+                self.convert_type.get(elt['type'], f_node)(**elt, owner=self)
+                for index, elt in enumerate(self)
+            ])
+        elif self.data_attr == 'features':
+            setattr(self, self.data_attr, [
+                self.convert_type.get(elt['geometry']['type'], f_node_geojson)(**elt, owner=self)
+                for index, elt in enumerate(self)
+            ])
 
         elts = getattr(self, self.data_attr)
         for obj in self:

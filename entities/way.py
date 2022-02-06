@@ -14,3 +14,7 @@ class f_way(f_entity):
         for node in self.nodes:
             pos += node.position
         return pos / len(self.nodes)
+
+    @position.setter
+    def position(self, value) -> None:
+        pass

@@ -7,9 +7,6 @@ def setUp():
     yield osm.f_osm()
 
 
-def test_create_base(setUp):
-    assert setUp.osm3s['copyright'] == osm.COPYRIGHT
-
 
 def test_append(setUp):
     setUp.append('1')

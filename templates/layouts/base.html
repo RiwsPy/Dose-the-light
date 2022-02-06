@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+{% load leaflet_tags %}
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="Debruyne Thibault" />
+        <title>{% block title %}Dose the Light{% endblock %}</title>
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+        <!--<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>-->
+        {% leaflet_js %}
+        {% leaflet_css %}
+
+        <!--
+        <script type="text/javascript" src="../src/leaflet.timedimension.js"></script>
+        <script type="text/javascript" src="../src/leaflet.timedimension.util.js"></script>
+        <script type="text/javascript" src="../src/leaflet.timedimension.layer.js"></script>
+        <script type="text/javascript" src="../src/leaflet.timedimension.layer.wms.js"></script>
+        <script type="text/javascript" src="../src/leaflet.timedimension.layer.geojson.js"></script>
+        <script type="text/javascript" src="../src/leaflet.timedimension.player.js"></script>
+        <script type="text/javascript" src="../src/leaflet.timedimension.control.js"></script>
+        <script type="text/javascript" src="js/baselayers.js"></script>
+        <script type="text/javascript" src="js/example12.js"></script>
+        -->
+
+    </head>
+    <body>
+        {% block header %}
+        {% endblock %}
+
+        {% block content %}
+        {% endblock %}
+
+        {% block footer %}
+        {% endblock %}
+    </body>
+</html>

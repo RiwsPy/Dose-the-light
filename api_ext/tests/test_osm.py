@@ -1,6 +1,6 @@
 from ..osm import call
 import requests
-from formats import osm
+from ...formats import osm
 import pytest
 from .. import BadStatusError
 

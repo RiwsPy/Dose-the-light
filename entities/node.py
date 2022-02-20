@@ -83,22 +83,21 @@ class f_node(f_entity):
         time_min = time_slot_int(opening_hours[date.group('day')][0])[0]
         time_max = time_slot_int(opening_hours[date.group('day')][-1])[-1]
 
-        if time_min == 0 and time_max == 24:  # 24/7
-            return False
-        elif self.landuse == 'residential' and\
-                (time_min - 1 <= int_hour < time_min + 2 or
-                 time_max - 2 <= int_hour < time_max + 1):
-            return True
-        elif time_min - 1 <= int_hour < time_min + 1 or \
-                time_max - 1 <= int_hour < time_max + 1:
-            return True
+        if time_min != 0 or time_max != 24:  # 24/7
+            if self.landuse == 'residential' and\
+                    (time_min - 1 <= int_hour < time_min + 2 or
+                     time_max - 2 <= int_hour < time_max + 1):
+                return True
+            elif time_min - 1 <= int_hour < time_min + 1 or \
+                    time_max - 1 <= int_hour < time_max + 1:
+                return True
 
         return False
 
     def coef_rush(self, date: re.Match) -> int:
         # TODO: 1 même entre midi et 14h en cas de fermeture
         if self.in_rush_hour(date):
-            if self.landuse == "residential":
+            if self.landuse == "residential" or self.amenity in ('school', 'college'):
                 return 5
             return 3
         if self.is_open(date):

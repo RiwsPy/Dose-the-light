@@ -20,5 +20,5 @@ from django.urls import path, re_path, include
 urlpatterns = [
     re_path(r'^admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='templates/layouts/base.html'), name='home'),
-    path('maps/', include("maps.urls"))
+    path('maps/', include("maps.urls")),
 ]

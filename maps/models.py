@@ -35,12 +35,13 @@ class Node(models.Model):
     @property
     def pr_dict(self) -> dict:
         clone_dict = self.__dict__.copy()
-        del clone_dict['_state']
-        position = clone_dict['position']
-        del clone_dict['position']
         new_dict = dict()
+        new_dict['type'] = "Feature"
+        new_dict['geometry'] = {'coordinates': list(clone_dict['position'])[::-1], 'type': 'Point'}
+
+        del clone_dict['_state']
+        del clone_dict['position']
         new_dict['properties'] = clone_dict
-        new_dict['geometry'] = {'coordinates': list(position)}
         return new_dict
 
     def load(self, **kwargs):
@@ -106,28 +107,31 @@ class Node(models.Model):
 
         if time_min == 0 and time_max == 24:  # 24/7
             return False
+        elif time_min - 1 <= int_hour < time_min + 1 or \
+                time_max - 1 <= int_hour < time_max + 1:
+            return True
         elif self.landuse == 'residential' and\
                 (time_min - 1 <= int_hour < time_min + 2 or
                  time_max - 2 <= int_hour < time_max + 1):
-            return True
-        elif time_min - 1 <= int_hour < time_min + 1 or \
-                time_max - 1 <= int_hour < time_max + 1:
             return True
 
         return False
 
     def coef_rush(self, date: re.Match) -> int:
         # TODO: 1 même entre midi et 14h en cas de fermeture
-
         if self.in_rush_hour(date):
-            if self.landuse == "residential":
-                return 5
-            return 3
+            if self.landuse == "residential" or self.is_school_building:
+                return 20
+            return 5
         if self.is_open(date):
-            if self.shop == 'supermarket':
-                return 2
+            if self.shop == 'supermarket' or self.amenity == 'marketplace':
+                return 3
             return 1
         return 0
+
+    @property
+    def is_school_building(self):
+        return self.amenity in ('school', 'college', 'kindergarten', 'childcare')
 
 
 def influencers_queryset() -> QuerySet:

@@ -1,61 +1,58 @@
-// var map = L.map('city_map').setView([45.1800301, 5.6992145], 15);
-//L.marker([45.1800301, 5.6992145]).addTo(map);
-
 var map = L.map('city_map', {
     zoom: 15,
     center: [45.1800301, 5.6992145],
     timeDimension: true,
     timeDimensionOptions: {
-        timeInterval: "2014-09-30/2014-10-30",
-        period: "PT1H"
+        timeInterval: "2023-02-06/P7D",
+        period: "PT1H",
     },
-    timeDimensionControl: true,
+    /*timeDimensionControl: true,
     timeDimensionControlOptions: {
         timeSliderDragUpdate: true,
-        loopButton: true,
+        position: 'bottomleft',
+        loopButton: false,
         autoPlay: false,
+        minSpeed: 0.1,
+        maxSpeed: 1,
         playerOptions: {
             transitionTime: 1000,
             loop: true
         }
-    },
+    },*/
 });
 
-const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: attribution }).addTo(map);
+var intervalInMlsec = 60*60*1000;
+var timeStart = 1675645200000;
 
-var layer_date = 'Mo 00:00';
-var gradientLayer = null;
-var nb_hour = 0;
+L.TimeDimension.Layer.SODAHeatMap = L.TimeDimension.Layer.extend({
+    _onNewTimeLoading: function(ev) {
+        this._currentLoadedTime = ev.time;
+        if (this.isCurrentLayerTime(ev.time) || this.isNextLayerTime(ev.time)) {
+            this._getDataForTime(ev.time);
+        }
+    },
 
-function addGeoJSONLayer(layer_date) {
-    let request = new Request('/maps/api/' + layer_date, {
-        method: 'GET',
-        headers: new Headers(),
-        })
+    isNextLayerTime: function(time) {
+        return (time == this._timeDimension.getCurrentTime() + intervalInMlsec)
+    },
 
-    fetch(request)
-    .then((resp) => resp.json())
-    .then((data) => {
-        //for (let node of data.features) {
-            //L.marker(node.geometry.coordinates).addTo(map);
-        //}
+    isReady: function(time) {
+        return true;
+        //return (this._currentLoadedTime == time);
+    },
 
-        var heatMapData = [];
-        data.features.forEach(function(d) {
-            heatMapData.push([
-                +d.geometry.coordinates[0],
-                +d.geometry.coordinates[1],
-                +d.properties.conflicts_value/20.0]);
-        });
+    isCurrentLayerTime(time) {
+        return (time == this._timeDimension.getCurrentTime());
+    },
 
-        if (gradientLayer !== null) {
-            map.removeLayer(gradientLayer);
+    _update: function(heatMapData) {
+        if (this._timeDimension.getCurrentTime() == this._currentLayerTime) {
+            return;
         }
 
-        gradientLayer = L.heatLayer(heatMapData, {
-            maxZoom: 20,
-            radius: 30,
+        let new_layer = L.heatLayer(heatMapData, {
+            maxZoom: 17,
+            radius: 20,
             gradient: {
                 0.0: 'violet',
                 0.20: 'blue',
@@ -65,29 +62,101 @@ function addGeoJSONLayer(layer_date) {
                 1.0: 'red'}
          });
 
-        gradientLayer.addTo(map);
-
-        if (nb_hour < 24) {
-            if (nb_hour <= 9) {
-                str_hour = '0' + nb_hour.toString()
-            } else {
-                str_hour = nb_hour.toString()
-            }
-
-            setTimeout(function(){
-                addGeoJSONLayer('Mo ' + str_hour + ':00')
-            }, 1000);
-            nb_hour += 1
+        if (this._currentLayer !== null) {
+            map.removeLayer(this._currentLayer);
         }
+        this._currentLayer = new_layer
+        this._currentLayerTime = this._timeDimension.getCurrentTime()
 
-      })
+        L.TimeDimension.Layer
+            this._currentLayer.addTo(map);
+        //this._getDataForTime(this._currentLayerTime + intervalInMlsec);
+    },
+
+    onAdd: function(map) {
+        this._map = map;
+        if (!this._timeDimension && map.timeDimension) {
+            this._timeDimension = map.timeDimension;
+        }
+        this._timeDimension.on("timeloading", this._onNewTimeLoading, this);
+        //this._timeDimension.on("timeload", this._update, this);
+        this._timeDimension.registerSyncedLayer(this);
+        this._getDataForTime(timeStart);
+    },
+
+    _getDataForTime: function(time) {
+        this._layersData = this._layersData || {}
+        this._layersIsRequested = this._layersIsRequested || {}
+
+        if (this._layersData[time]) {
+            if (this.isNextLayerTime(time)) {
+                this._update(this._layersData[time]);
+            }
+            return;
+        }
+        if (this._layersIsRequested[time]) {
+            return;
+        }
+        this._layersIsRequested[time] = true;
+
+        let request = new Request('/maps/api/date/' + (time - timeStart + intervalInMlsec), {
+            method: 'GET',
+            headers: new Headers(),
+            })
+
+        fetch(request)
+        .then((resp) => resp.json())
+        .then((data) => {
+            var heatMapData = [];
+            data.features.forEach(function(d) {
+                heatMapData.push([
+                    +d.geometry.coordinates[1],
+                    +d.geometry.coordinates[0],
+                    +d.properties.conflicts_value/20.0]);
+            });
+
+            this._layersData[time] = heatMapData;
+            if (this.isCurrentLayerTime(time) || this.isNextLayerTime(time)) {
+                this._update(heatMapData);
+            }
+       })
+    }
+})
+
+L.timeDimension.layer.sodaHeatMap = function(options) {
+    return new L.TimeDimension.Layer.SODAHeatMap(options);
 };
 
-addGeoJSONLayer(layer_date);
+const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: attribution }).addTo(map);
 
+function addGeoJSONLayer(map) {
+    var geoJSONLayer = L.geoJSON({features: []});
+    var soda = L.timeDimension.layer.sodaHeatMap(geoJSONLayer);
+    soda.addTo(map);
+};
 
-/*
-  setTimeout(function() {
-    alert("Hi again!");
-  }, 1000)
-*/
+addGeoJSONLayer(map);
+
+days_fr = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi']
+
+L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
+    _getDisplayDateFormat: function(date){
+        return days_fr[date.getDay()] + ' ' + date.getHours() + 'h';
+    }
+});
+
+var timeDimensionControl = new L.Control.TimeDimensionCustom(
+    {
+        timeSliderDragUpdate: true,
+        position: 'bottomleft',
+        loopButton: false,
+        autoPlay: false,
+        minSpeed: 0.1,
+        maxSpeed: 1,
+        playerOptions: {
+            loop: true
+        }
+    }
+);
+map.addControl(this.timeDimensionControl);

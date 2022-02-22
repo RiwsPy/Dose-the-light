@@ -1,5 +1,6 @@
 var map = L.map('city_map', {
-    zoom: 15,
+    zoom: 16,
+    minZoom: 15,
     center: [45.1800301, 5.6992145],
     timeDimension: true,
     timeDimensionOptions: {
@@ -20,6 +21,52 @@ var map = L.map('city_map', {
         }
     },*/
 });
+
+var colorNameToRGB = {
+    Yellow: '#FFFF00',
+    Lime: '#00FF00',
+    DarkOliveGreen: '#556B2F',
+    LimeGreen: '#32CD32',
+    DarkGreen: '#006400',
+    DarkOrange: '#FF8C00',
+    Blue: '#0000FF',
+    Magenta: '#FF00FF',
+    Cyan: '#00FFFF',
+    Green: '#00FF00',
+    SandyBrown: '#F4A460',
+    Fuchsia: '#FD3F92',
+    Salmon: '#FA8072',
+    DeepSkyBlue: '#00BFFF',
+    Red: '#FF0000',
+    YellowGreen: '#9ACD32',
+    Chocolate: '#84563C',
+    LawnGreen: '#7CFC00',
+
+}
+
+function loadBloc(fileName) {
+    let request = new Request('api/' + fileName, {
+        method: 'GET',
+        headers: new Headers(),
+        })
+
+    fetch(request)
+    .then((resp) => resp.json())
+    .then((data) => {
+        let blocLayer = new L.FeatureGroup();
+        L.geoJSON(data, {
+            style: function (feature) {
+                return {color: colorNameToRGB[(feature.properties._umap_options || {color: 'Ref'}).color],
+                        weight: 7,
+                        opacity: 0.5};
+        }}).addTo(blocLayer);
+        L.control.layers(null, {
+            "Bloc luminaires": blocLayer,
+        }).addTo(map);
+    });
+}
+
+loadBloc('seyssinet_pariset_bloc__clairage_public.json')
 
 var intervalInMlsec = 60*60*1000;
 var timeStart = 1675645200000;
@@ -52,7 +99,9 @@ L.TimeDimension.Layer.SODAHeatMap = L.TimeDimension.Layer.extend({
 
         let new_layer = L.heatLayer(heatMapData, {
             maxZoom: 17,
-            radius: 20,
+            radius: 25,
+            max: 1.0,
+            blur: 20,
             gradient: {
                 0.0: 'violet',
                 0.20: 'blue',
@@ -112,7 +161,7 @@ L.TimeDimension.Layer.SODAHeatMap = L.TimeDimension.Layer.extend({
                 heatMapData.push([
                     +d.geometry.coordinates[1],
                     +d.geometry.coordinates[0],
-                    +d.properties.conflicts_value/20.0]);
+                    Math.min(+d.properties.conflicts_value/30.0, 1.0)]);
             });
 
             this._layersData[time] = heatMapData;

@@ -1,42 +1,142 @@
 from formats.osm import f_osm
 from formats.geojson import f_geojson
-from api_ext.osm import call
+from api_ext.osm import Osm
+import json
+from pathlib import Path
+import os
+
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-class Works(f_osm):
+class Works(dict):
     query = ""
-    filename = "empty.json"
-    call_method = call
+    db_filename = "empty"
+    file_ext = '.json'
+    call_method = Osm().call
+    data_attr = "elements"
+    url = ""
+
+    def __iter__(self):
+        yield from self.features
+
+    @property
+    def iter_point(self):
+        dict_id_node = {elt['id']: elt
+                        for elt in self
+                        }
+        for elt in self:
+            if elt['type'] == 'node':
+                yield elt
+                continue
+
+            cumul_lat, cumul_lon = 0, 0
+            for search_node_id in elt['nodes']:
+                node = dict_id_node[search_node_id]
+                cumul_lat += node['lat']
+                cumul_lon += node['lon']
+            center_lat = cumul_lat/len(elt['nodes'])
+            center_lon = cumul_lon/len(elt['nodes'])
+            elt['type'] = 'node'
+            elt['lat'] = center_lat
+            elt['lon'] = center_lon
+            del elt['nodes']
+            yield elt
+
+    @property
+    def features(self) -> list:
+        return self[self.data_attr]
 
     def __len__(self) -> int:
-        return len(self.elements)
+        return len(self.features)
 
-    def update(self, filename=''):
-        ret = self.call_method(self.query)
-        if ret.get('features') is not None:  # geojson
-            f = f_geojson()
-            f = f.load_and_create_osm(ret)
-        elif ret.get('elements') is not None:  # osm
-            f = f_osm()
-            f.loads(ret)
-        else:
-            raise TypeError
-        f.dump(filename or self.filename)
+    @property
+    def filename(self) -> str:
+        return self.db_filename
 
-    def load(self, filename=''):
-        filename = filename or self.filename
-        if type(filename) is str:
-            super().load(filename)
-        elif type(filename) is tuple:
-            super().load(*filename)
+    @property
+    def output_filename(self) -> str:
+        return self.db_filename + '_output'
 
-    def output(self, filename=''):
+    def request(self, **kwargs) -> dict:
+        if self.query and 'query' not in kwargs:
+            kwargs['query'] = self.query
+        if self.url and 'url' not in kwargs:
+            kwargs['url'] = self.url
+
+        return self.call_method(**kwargs)
+
+    def update(self, **kwargs) -> None:
+        super().update(convert_geojson_to_osm(kwargs))
+
+    def load(self, filename='') -> None:
+        with open(os.path.join(BASE_DIR, 'db/' + (filename or self.filename) + self.file_ext), 'r') as file:
+            self.update(**json.load(file))
+
+    def dump(self, filename='') -> None:
+        with open(os.path.join(BASE_DIR, 'db/' + (filename or self.output_filename) + self.file_ext), 'w') as file:
+            json.dump(self, file, ensure_ascii=False, indent=1)
+
+    def output(self, filename='') -> None:
         new_f = self.__class__()
-        new_f.extend(
+        new_f.update(**self)
+        new_f[self.data_attr] = \
             [obj
-             for obj in self
-             if self._can_be_output(obj)])
-        new_f.dump(filename or self.filename + '_output')
+             for obj in self.iter_point
+             if self._can_be_output(obj)]
+        new_f.dump(filename)
 
-    def _can_be_output(*args) -> bool:
-        return True
+    def _can_be_output(self, obj) -> bool:
+        return obj.get('tags', {}).get('name')
+
+
+def convert_osm_to_geojson(data_dict: dict) -> dict:
+    if 'features' in data_dict:
+        return data_dict
+    if 'elements' not in data_dict:
+        raise KeyError
+
+    ret = f_geojson()
+
+    for elt in data_dict['elements']:
+        if elt.get('_dont_copy'):
+            continue
+
+        elt_geojson = dict()
+        elt_geojson['type'] = "Feature"
+        elt_geojson['properties'] = elt.get('tags', {})
+        if elt['type'] == 'node':
+            elt_geojson['geometry'] = {'type': 'Point'}
+            elt_geojson['geometry']['coordinates'] = [elt['lat'], elt['lon']]
+        elif elt['type'] == 'way':
+            elt_geojson['geometry'] = {}
+            elt_geojson['geometry']['type'] = 'Polygon'
+            elt_geojson['geometry']['coordinates'] = [[]]
+            for search_node_id in elt['nodes']:
+                for data_node in data_dict['elements']:
+                    if data_node['id'] == search_node_id:
+                        elt_geojson['geometry']['coordinates'][0].append([data_node['lon'], data_node['lat']])
+                        data_node['_dont_copy'] = True
+                        break
+
+        ret.append(elt_geojson)
+    return ret.__dict__
+
+
+def convert_geojson_to_osm(data_dict: dict) -> dict:
+    if 'elements' in data_dict:
+        return data_dict
+    if 'features' not in data_dict:
+        raise KeyError
+
+    f = f_osm()
+    for elt in data_dict['features']:
+        if elt['geometry']['type'] == 'Point':
+            new_item = dict()
+            new_item['type'] = 'node'
+            new_item['lon'], new_item['lat'] = elt['geometry']['coordinates']
+            new_item['id'] = f.create_unique_id()
+            new_item['tags'] = elt['properties']
+            f.append(new_item)
+        else:
+            print(elt['geometry']['type'], 'unknown')
+    return f.__dict__

@@ -46,7 +46,7 @@ class Node(models.Model):
 
     def load(self, **kwargs):
         new_attrs = dict(**kwargs.get('tags', {}), **kwargs)
-        new_attrs['position'] = Point(kwargs['lat'], kwargs['lng'])
+        new_attrs['position'] = Point(kwargs['lat'], kwargs['lon'])
         new_attrs['conflicts_details'] = new_attrs.get('conflicts_details', '') +\
             '\n'.join(new_attrs.get('conflicts', []))
 
@@ -82,8 +82,8 @@ class Node(models.Model):
             return building_opening_hours.childcare
         return {}
 
-    def is_open(self, date: str) -> bool:
-        if self.amenity in ('police', 'fire_station', 'hospital'):
+    def is_open(self, date: re.Match) -> bool:
+        if self.is_always_open:
             return True
 
         opening_hours = self._opening_hours
@@ -95,11 +95,24 @@ class Node(models.Model):
 
         return not opening_hours
 
+    def is_open_or_on_break(self, date: re.Match) -> bool:
+        opening_hours = self._opening_hours
+        if opening_hours[date.group('day')]:
+            int_hour = hour_int(date.group('hour'))
+            time_min = time_slot_int(opening_hours[date.group('day')][0])[0]
+            time_max = time_slot_int(opening_hours[date.group('day')][-1])[-1]
+            if time_min <= int_hour <= time_max:
+                return True
+
+        return False
+
     def in_rush_hour(self, date: re.Match) -> bool:
         # TODO: gestion des heures +1/-1 incorrectes sur des horaires proches de minuit
         opening_hours = self._opening_hours
 
-        if not opening_hours or date.group('day') not in opening_hours or not opening_hours[date.group('day')]:
+        if not opening_hours or date.group('day') not in opening_hours or\
+                not opening_hours[date.group('day')] or\
+                self.is_always_open:
             return False
         int_hour = hour_int(date.group('hour'))
         time_min = time_slot_int(opening_hours[date.group('day')][0])[0]
@@ -107,18 +120,17 @@ class Node(models.Model):
 
         if time_min == 0 and time_max == 24:  # 24/7
             return False
-        elif time_min - 1 <= int_hour < time_min + 1 or \
+        elif time_min - 1 < int_hour <= time_min + 1 or \
                 time_max - 1 <= int_hour < time_max + 1:
             return True
         elif self.landuse == 'residential' and\
-                (time_min - 1 <= int_hour < time_min + 2 or
-                 time_max - 2 <= int_hour < time_max + 1):
+                (time_min - 1 <= int_hour <= time_min + 2 or
+                 time_max - 2 <= int_hour <= time_max + 1):
             return True
 
         return False
 
     def coef_rush(self, date: re.Match) -> int:
-        # TODO: 1 même entre midi et 14h en cas de fermeture
         if self.in_rush_hour(date):
             if self.landuse == "residential" or self.is_school_building:
                 return 20
@@ -126,12 +138,19 @@ class Node(models.Model):
         if self.is_open(date):
             if self.shop == 'supermarket' or self.amenity == 'marketplace':
                 return 3
+            elif self.is_always_open:
+                return 2
             return 1
-        return 0
+
+        return int(self.is_open_or_on_break(date))
 
     @property
-    def is_school_building(self):
+    def is_school_building(self) -> bool:
         return self.amenity in ('school', 'college', 'kindergarten', 'childcare')
+
+    @property
+    def is_always_open(self) -> bool:
+        return self.amenity in ('police', 'fire_station', 'hospital', 'place_of_worship')
 
 
 def influencers_queryset() -> QuerySet:

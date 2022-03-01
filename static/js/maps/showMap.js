@@ -9,6 +9,14 @@ var map = L.map('city_map', {
     }
 });
 
+// Active control buttons
+map.addControl(new L.Control.Fullscreen({
+    title: {
+        'false': 'Vue plein écran',
+        'true': 'Quitter le plein écran'
+    }
+}));
+
 var colorNameToRGB = {
     Yellow: '#FFFF00',
     Lime: '#00FF00',

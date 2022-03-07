@@ -7,7 +7,6 @@ def setUp():
     yield osm.f_osm()
 
 
-
 def test_append(setUp):
     setUp.append('1')
     assert setUp.elements == ['1']
@@ -26,8 +25,3 @@ def test_load(setUp):
     assert node in way.nodes
     relation = setUp.elements[2]
     assert node in relation.nodes
-    assert way in relation.ways
-
-    clone = setUp.__dict__.copy()
-    setUp.load('base', 'empty')
-    assert clone == setUp.__dict__

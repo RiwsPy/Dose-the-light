@@ -19,7 +19,7 @@ class Node(models.Model):
     conflicts_value = models.IntegerField(default=0)
     conflicts_details = models.TextField(default="")
 
-    opening_hours = models.CharField(max_length=255, default="")
+    opening_hours = models.CharField(max_length=255, default="")  # 'Mo 08:00-20:00'
     name = models.CharField(max_length=255, default="")
     amenity = models.CharField(max_length=255, default="")
     highway = models.CharField(max_length=255, default="")
@@ -55,7 +55,9 @@ class Node(models.Model):
 
     @staticmethod
     def serialize(queryset, file_format: str = "geojson") -> dict:
-        return json.loads(serializers.serialize(file_format, queryset))
+        ret = json.loads(serializers.serialize(file_format, queryset))
+        del ret['crs']
+        return ret
 
     @property
     def _opening_hours(self) -> Dict[str, list]:
@@ -151,6 +153,10 @@ class Node(models.Model):
     @property
     def is_always_open(self) -> bool:
         return self.amenity in ('police', 'fire_station', 'hospital', 'place_of_worship')
+
+    class Meta:
+        verbose_name = "noeud"
+        ordering = ['id']
 
 
 def influencers_queryset() -> QuerySet:

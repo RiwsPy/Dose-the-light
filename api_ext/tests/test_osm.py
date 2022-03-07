@@ -1,4 +1,4 @@
-from ..osm import call
+from ..osm import Osm
 import requests
 from ...formats import osm
 import pytest
@@ -19,7 +19,7 @@ def test_call_ok(monkeypatch):
         return Mock_request(200)
 
     monkeypatch.setattr(requests, "request", mock_get)
-    req = call(0, query="")
+    req = Osm().call(query="")
     assert req['version'] == 0.6
     assert req['osm3s']['copyright'] == osm.COPYRIGHT
     assert req['elements'] == []
@@ -31,4 +31,4 @@ def test_call_fail(monkeypatch):
 
     monkeypatch.setattr(requests, "request", mock_get)
     with pytest.raises(BadStatusError):
-        call(0, query="")
+        Osm().call(query="")

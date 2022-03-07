@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'maps',
 ]
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

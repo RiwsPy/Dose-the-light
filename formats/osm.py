@@ -1,23 +1,23 @@
-from datetime import datetime
-import time
 from . import base
-
-COPYRIGHT = 'The data included in this document is from www.openstreetmap.org.' +\
-            ' The data is made available under ODbL.'
 
 
 class f_osm(base):
+    DB_ORIGIN = 'www.openstreetmap.org'
+    DB_LICENSE = 'ODbL'
     data_attr = 'elements'
 
     def __init__(self):
-        self.version = 0.6
-        self.generator = "Overpass API 0.7.57.1 74a55df1"
-        self.osm3s = {
-            # "timestamp_osm_base": str(datetime.fromtimestamp(time.time())),
-            # "timestamp_areas_base": str(datetime.fromtimestamp(time.time())),
-            'copyright': COPYRIGHT,
-        }
+        self.copyright = f'The data included in this document is from {self.DB_ORIGIN}.' +\
+                         f' The data is made available under {self.DB_LICENSE}.'
         super().__init__()
 
     def mod_to_osm(self):
         return self
+
+    @property
+    def __dict__(self) -> dict:
+        cpy = super().__dict__.copy()
+        cpy[self.data_attr] = [
+            obj
+            for obj in cpy[self.data_attr]]
+        return cpy

@@ -13,4 +13,7 @@ html, body {
     margin: 5%;
 }
 
-
+.center_vert {
+    margin-top: 100px;
+    background-color: skyblue;
+}

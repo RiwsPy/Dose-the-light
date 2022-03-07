@@ -12,8 +12,8 @@ class Conflicts(Works):
         f"""
         (
             (
-                way(area.city)[highway][access!="private"][highway!=footway][highway!=service][highway!=platform][highway!=traffic_signals];
-                way(area.city)[railway][railway!=abandoned][railway!=razed];
+                way(area.lim_area)(area.city)[highway][access!="private"][highway!=footway][highway!=service][highway!=platform][highway!=traffic_signals];
+                way(area.lim_area)(area.city)[railway][railway!=abandoned][railway!=razed];
             )->.highway_items;
             node(around.highway_items:{check_radius})[highway][highway!="street_lamp"][access!="private"];
         );

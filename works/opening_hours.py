@@ -8,8 +8,8 @@ class Opening_hours(Works):
     query = \
         """
         (
-            node(area.city)[opening_hours][opening_hours!='24/7'][access!="private"];
-            way(area.city)[opening_hours][opening_hours!='24/7'][access!="private"];
+            node(area.lim_area)(area.city)[opening_hours][opening_hours!='24/7'][access!="private"];
+            way(area.lim_area)(area.city)[opening_hours][opening_hours!='24/7'][access!="private"];
         );
         (._;>;);
         """

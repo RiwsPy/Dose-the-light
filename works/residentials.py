@@ -9,7 +9,7 @@ class Residentials(Works):
     query = \
         """
         (
-            way(area.city)[landuse=residential];
+            way(area.lim_area)(area.city)[landuse=residential];
         );
         (._;>;);
         """

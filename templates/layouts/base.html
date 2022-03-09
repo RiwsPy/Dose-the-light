@@ -28,9 +28,11 @@
         {% endblock %}
 
         {% block content %}
+
             <div class="row align-items-center justify-content-center text-center">
                 <div class="col">
-                    <a href="/maps" class="btn btn-success" role="button">Accéder à la carte</a>
+                    {% include 'templates/layouts/info_message.html' %}
+                    {% include 'templates/layouts/search_form.html' %}
                 </div>
             </div>
         {% endblock %}

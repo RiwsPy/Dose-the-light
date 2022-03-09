@@ -1,0 +1,22 @@
+<form action="{% url 'result' %}" method="get">
+    <div class="row">
+        <div class="column">
+            <label for="postal_code_input"></label>
+            <!--pattern="\d{5}"-->
+            <input type="search"
+                list="postal_code_choice"
+                name="user_search"
+                id="postal_code_input"
+                placeholder="Code postal ou nom de la ville"
+                size="30"
+                autofocus
+                required
+                spellcheck="false">
+            <datalist id="postal_code_choice">
+               <option value="38170">
+               <option value="Seyssinet-Pariset">
+           </datalist>
+            <button id="search_button" type="submit" class="btn btn-outline-success">Accéder à la carte</button>
+        </div>
+    </div>
+</form>

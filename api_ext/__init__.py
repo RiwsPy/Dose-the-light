@@ -10,6 +10,11 @@ class Api_ext:
     BASE_URL = 'http://127.0.0.1:8000/'
 
     def call(self, **kwargs) -> dict:
+        try:
+            del kwargs['postal_code']
+        except KeyError:
+            pass
+
         kwargs['method'] = kwargs.get('method', self.METHOD)
         kwargs['url'] = self.BASE_URL + kwargs.get('url', '')
 

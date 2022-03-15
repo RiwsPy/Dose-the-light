@@ -4,7 +4,6 @@ var city_center_pos = {
     38170: [45.1800301, 5.6992145],
 };
 
-
 var map = L.map('city_map', {
     zoom: 16,
     minZoom: 15,
@@ -82,7 +81,7 @@ function addGeoJSONLayer(map) {
 
 addGeoJSONLayer(map);
 
-days_fr = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi']
+var days_fr = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
 
 L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
     _getDisplayDateFormat: function(date){

@@ -9,11 +9,12 @@ from entities.position import Position
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
 
 db_files = {
-    'conflicts_output.json': {'is_conflict': True, 'is_influencer': False},
-    'opening_hours_output.json': {'is_conflict': False, 'is_influencer': True},
-    'public_building_output.json': {'is_conflict': False, 'is_influencer': True},
-    'residentials_output.json': {'is_conflict': False, 'is_influencer': True},
-    'worksites_output.json': {'is_conflict': True, 'is_influencer': False},
+    '38170_conflicts.json': {'is_conflict': True, 'is_influencer': False},
+    '38170_opening_hours.json': {'is_conflict': False, 'is_influencer': True},
+    '38170_public_building.json': {'is_conflict': False, 'is_influencer': True},
+    '38170_residentials.json': {'is_conflict': False, 'is_influencer': True},
+
+    '38170_worksites.json': {'is_conflict': True, 'is_influencer': False},
 }
 
 

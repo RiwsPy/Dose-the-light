@@ -8,14 +8,14 @@ class Public_buildings(Works):
     query = \
         """
         (
-            nwr(area.city)[amenity=kindergarten];
-            nwr(area.city)[amenity=childcare];
-            nwr(area.city)[amenity=school];
-            nwr(area.city)[amenity=college];
-            nwr(area.city)[amenity=fire_station];
-            nwr(area.city)[amenity=police];
-            nwr(area.city)[amenity=hospital];
-            nwr(area.city)[amenity=place_of_worship];
+            nwr(area.lim_area)(area.city)[amenity=kindergarten];
+            nwr(area.lim_area)(area.city)[amenity=childcare];
+            nwr(area.lim_area)(area.city)[amenity=school];
+            nwr(area.lim_area)(area.city)[amenity=college];
+            nwr(area.lim_area)(area.city)[amenity=fire_station];
+            nwr(area.lim_area)(area.city)[amenity=police];
+            nwr(area.lim_area)(area.city)[amenity=hospital];
+            nwr(area.lim_area)(area.city)[amenity=place_of_worship];
         );
         (._;>;);
         """

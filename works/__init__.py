@@ -15,6 +15,7 @@ class Works(dict):
     call_method = Osm().call
     data_attr = "elements"
     url = ""
+    postal_code = "38170"
 
     def __iter__(self):
         yield from self.features
@@ -51,17 +52,14 @@ class Works(dict):
 
     @property
     def filename(self) -> str:
-        return self.db_filename
-
-    @property
-    def output_filename(self) -> str:
-        return self.db_filename + '_output'
+        return self.postal_code + '_' + self.db_filename
 
     def request(self, **kwargs) -> dict:
         if self.query and 'query' not in kwargs:
             kwargs['query'] = self.query
         if self.url and 'url' not in kwargs:
             kwargs['url'] = self.url
+        kwargs['postal_code'] = kwargs.get('postal_code', self.postal_code)
 
         return self.call_method(**kwargs)
 
@@ -73,7 +71,7 @@ class Works(dict):
             self.update(**json.load(file))
 
     def dump(self, filename='') -> None:
-        with open(os.path.join(BASE_DIR, 'db/' + (filename or self.output_filename) + self.file_ext), 'w') as file:
+        with open(os.path.join(BASE_DIR, 'db/' + (filename or self.filename) + self.file_ext), 'w') as file:
             json.dump(self, file, ensure_ascii=False, indent=1)
 
     def output(self, filename='') -> None:

@@ -1,7 +1,13 @@
+var postal_code = window.location.href.split('/')[4];
+
+var city_center_pos = {
+    38170: [45.1800301, 5.6992145],
+};
+
 var map = L.map('city_map', {
     zoom: 16,
     minZoom: 15,
-    center: [45.1800301, 5.6992145],
+    center: city_center_pos[postal_code] || [45.1800301, 5.6992145],
     timeDimension: true,
     timeDimensionOptions: {
         timeInterval: "2023-02-06/P7D",
@@ -39,7 +45,7 @@ var colorNameToRGB = {
 }
 
 function loadBloc(fileName) {
-    let request = new Request('api/' + fileName, {
+    let request = new Request('http://127.0.0.1:8000/maps/api/file/' + fileName, {
         method: 'GET',
         headers: new Headers(),
         })
@@ -60,7 +66,9 @@ function loadBloc(fileName) {
     });
 }
 
-loadBloc('seyssinet_pariset_bloc__clairage_public.json')
+if (postal_code) {
+    loadBloc(postal_code + '_bloc_eclairage_public.json')
+}
 
 const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: attribution }).addTo(map);
@@ -73,7 +81,7 @@ function addGeoJSONLayer(map) {
 
 addGeoJSONLayer(map);
 
-days_fr = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi']
+var days_fr = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
 
 L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
     _getDisplayDateFormat: function(date){

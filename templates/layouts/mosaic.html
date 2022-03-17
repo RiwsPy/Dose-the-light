@@ -6,9 +6,11 @@
                 <a href="/maps/{{ city.postal_code }}">
                     <div class="city_presentation">
                         <p>{{ city.name }}</p>
-                        <span class="image">
-                            <img src="static/img/gab.png" alt="" width="200" height="200">
-                        </span>
+                        {% if city.imgname %}
+                            <img class="image" src="{{ city.imgname }}" alt="city img map">
+                        {% else %}
+                            <p class="no-image">Aucun aperçu disponible.</p>
+                        {% endif %}
                     </div>
                 </a>
             </div>

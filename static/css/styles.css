@@ -27,7 +27,19 @@ html, body {
 
 .city_presentation {
   background-color: rgb(250, 243, 250);
+  height: 300px;
+  width: 350px;
   border-radius: 30px;
   margin-bottom: 20px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.city_presentation .no-image {
+    margin-top: 30%;
+    color: black;
+}
+
+.city_presentation .image {
+    width: 200px;
+    height: 200px;
 }

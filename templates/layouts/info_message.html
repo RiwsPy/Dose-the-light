@@ -1,7 +1,6 @@
-{% for msg in msgs %}
-    <h4 class="color-caramel">{{msg}}</h4>
-{% endfor %}
-
 {% if msgs %}
+    {% for msg in msgs %}
+        <h4>{{msg}}</h4>
+    {% endfor %}
     <hr class="divider my-4" />
 {% endif %}

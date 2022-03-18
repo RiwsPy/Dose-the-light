@@ -2,34 +2,15 @@ from django.shortcuts import redirect, render
 from django.urls.base import reverse
 from django.core.handlers.wsgi import WSGIRequest
 from django.http.response import HttpResponse
-import os
-from .settings import BASE_DIR
+from django.core.exceptions import ObjectDoesNotExist
+from maps.models import City
 
-CITY_NAMES_CHOICE = {
-    'seyssinet-pariset': 38170,
-    'seyssinet pariset': 38170,
-}
-
-ROOT_IMG = 'static/img/'
-
-CITY_DATA = [
-    {'name': 'Seyssinet-Pariset',
-     'postal_code': 38170},
-    {'name': 'Grenoble',
-     'postal_code': 38000},
-]
-
-# auto-completion imagefile
-for city in CITY_DATA:
-    if 'imgname' not in city and 'postal_code' in city:
-        root_img = ROOT_IMG + str(city['postal_code']) + '_apercu.png'
-        if os.path.exists(os.path.join(BASE_DIR, root_img)):
-            city['imgname'] = root_img
+NB_FAVORITE_CITIES = 3
 
 
 def home(request: WSGIRequest, *args) -> HttpResponse:
     error_msg = ''
-    user_search_postal_code = 0
+
     if request.method == 'GET':
         user_search = request.GET.get('user_search', '')
 
@@ -38,24 +19,26 @@ def home(request: WSGIRequest, *args) -> HttpResponse:
                           'templates/layouts/base.html',
                           context={
                               'msgs': args,
-                              'cities': CITY_DATA,
+                              'cities': City.objects.all()[:NB_FAVORITE_CITIES],
                           })
 
         user_search = request.GET.get('user_search', '')
-        try:
-            user_search_postal_code = int(user_search)
-        except ValueError:
-            if user_search.lower() in CITY_NAMES_CHOICE:
-                user_search_postal_code = CITY_NAMES_CHOICE[user_search.lower()]
-            else:
-                error_msg = 'Ville non reconnue.'
-        else:
-            if user_search_postal_code not in CITY_NAMES_CHOICE.values():
+        if user_search.isdigit():
+            try:
+                user_search_city = City.objects.get(postal_code=int(user_search))
+            except ObjectDoesNotExist:
                 error_msg = 'Code postal non reconnu.'
+        else:
+            try:
+                user_search_city = City.objects.get(name__iexact=user_search)
+            except ObjectDoesNotExist:
+                error_msg = 'Ville non reconnue.'
     else:
         error_msg = 'Méthode non autorisée.'
 
     if error_msg:
         return home(request, error_msg)
 
-    return redirect('maps', user_search_postal_code)
+    user_search_city.nb_click += 1
+    user_search_city.save()
+    return redirect('maps', user_search_city.postal_code)

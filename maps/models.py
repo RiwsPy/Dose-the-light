@@ -6,6 +6,8 @@ from typing import Dict
 import json
 from django.db.models import QuerySet
 import re
+import os
+from dosethelight.settings import BASE_DIR
 
 
 class Node(models.Model):
@@ -165,3 +167,30 @@ def influencers_queryset() -> QuerySet:
 
 def conflicts_queryset() -> QuerySet:
     return Node.objects.filter(is_conflict=True)
+
+
+ROOT_IMG = 'static/img/'
+
+
+class City(models.Model):
+    id = models.IntegerField(primary_key=True)
+    position = models.PointField(default=Point(0, 0))
+    name = models.CharField(max_length=255, default="")
+    postal_code = models.IntegerField()
+    img_file = models.CharField(max_length=255, default="")
+    nb_click = models.IntegerField(default=0)
+
+    def load(self, **kwargs):
+        new_attrs = dict(**kwargs.get('tags', {}), **kwargs)
+        new_attrs['position'] = Point(kwargs['lat'], kwargs['lon'])
+
+        root_img = ROOT_IMG + str(kwargs['postal_code']) + '_apercu.png'
+        if not os.path.exists(os.path.join(BASE_DIR, root_img)):
+            root_img = ""
+        new_attrs['img_file'] = root_img
+
+        for k, v in new_attrs.items():
+            setattr(self, k, v)
+
+    class Meta:
+        ordering = ['-nb_click']

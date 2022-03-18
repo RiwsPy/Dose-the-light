@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from maps.models import Node, influencers_queryset, conflicts_queryset
+from maps.models import Node, influencers_queryset, conflicts_queryset, City
 import json
 import os
 from pathlib import Path
@@ -24,6 +24,10 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs) -> None:
         self.stdout.write(self.style.MIGRATE_HEADING(self.help))
         reset()
+        self.save_conflicts()
+        self.save_cities()
+
+    def save_conflicts(self):
         for filename in db_files:
             upload(filename)
         self.stdout.write(self.style.MIGRATE_HEADING('conflict in range en cours'))
@@ -37,9 +41,27 @@ class Command(BaseCommand):
         self.stdout.write(self.style.MIGRATE_HEADING(
             f'{Node.objects.filter(is_conflict=True).count()} conflit(s) in db.'))
 
+    def save_cities(self):
+        with open(os.path.join(BASE_DIR, 'db/all_city_delimitations.json'), 'r') as file:
+            data_objects = json.load(file)
+
+        for data_city in data_objects['elements']:
+            try:
+                for postal_code in data_city['tags']['addr:postcode'].split(';'):
+                    if postal_code:
+                        new_city = City()
+                        new_city.load(**data_city, postal_code=int(postal_code))
+                        new_city.save()
+            except KeyError:
+                pass
+
+        self.stdout.write(self.style.MIGRATE_HEADING(
+            f'{City.objects.all().count()} cities in db.'))
+
 
 def reset() -> None:
     Node.objects.all().delete()
+    City.objects.all().delete()
 
 
 def upload(filename: str) -> None:

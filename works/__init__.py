@@ -16,6 +16,7 @@ class Works(dict):
     data_attr = "elements"
     url = ""
     postal_code = "38170"
+    skel_qt = False
 
     def __iter__(self):
         yield from self.features
@@ -28,20 +29,19 @@ class Works(dict):
         for elt in self:
             if elt['type'] == 'node':
                 yield elt
-                continue
-
-            cumul_lat, cumul_lon = 0, 0
-            for search_node_id in elt['nodes']:
-                node = dict_id_node[search_node_id]
-                cumul_lat += node['lat']
-                cumul_lon += node['lon']
-            center_lat = cumul_lat/len(elt['nodes'])
-            center_lon = cumul_lon/len(elt['nodes'])
-            elt['type'] = 'node'
-            elt['lat'] = center_lat
-            elt['lon'] = center_lon
-            del elt['nodes']
-            yield elt
+            elif elt['type'] == 'way':
+                cumul_lat, cumul_lon = 0, 0
+                for search_node_id in elt['nodes']:
+                    node = dict_id_node[search_node_id]
+                    cumul_lat += node['lat']
+                    cumul_lon += node['lon']
+                center_lat = cumul_lat/len(elt['nodes'])
+                center_lon = cumul_lon/len(elt['nodes'])
+                elt['type'] = 'node'
+                elt['lat'] = center_lat
+                elt['lon'] = center_lon
+                del elt['nodes']
+                yield elt
 
     @property
     def features(self) -> list:
@@ -55,13 +55,16 @@ class Works(dict):
         return self.postal_code + '_' + self.db_filename
 
     def request(self, **kwargs) -> dict:
-        if self.query and 'query' not in kwargs:
-            kwargs['query'] = self.query
-        if self.url and 'url' not in kwargs:
-            kwargs['url'] = self.url
+        kwargs = self._add_attr_in_kwargs('query', 'url', 'skel_qt', **kwargs)
         kwargs['postal_code'] = kwargs.get('postal_code', self.postal_code)
 
         return self.call_method(**kwargs)
+
+    def _add_attr_in_kwargs(self, *args, **kwargs) -> dict:
+        for attr in args:
+            if attr not in kwargs and getattr(self, attr, False):
+                kwargs[attr] = getattr(self, attr)
+        return kwargs
 
     def update(self, **kwargs) -> None:
         super().update(convert_geojson_to_osm(kwargs))

@@ -1,13 +1,15 @@
-var postal_code = window.location.href.split('/')[4];
+var days_fr = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
 
-var city_center_pos = {
-    38170: [45.1800301, 5.6992145],
-};
+L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
+    _getDisplayDateFormat: function(date){
+        return days_fr[date.getDay()] + ' ' + date.getHours() + 'h';
+    }
+});
 
 var map = L.map('city_map', {
     zoom: 16,
     minZoom: 15,
-    center: city_center_pos[postal_code] || [45.1800301, 5.6992145],
+    center: [45.1800301, 5.6992145],
     timeDimension: true,
     timeDimensionOptions: {
         timeInterval: "2023-02-06/P7D",
@@ -22,6 +24,49 @@ map.addControl(new L.Control.Fullscreen({
         'true': 'Quitter le plein écran'
     }
 }));
+
+var postal_code = window.location.href.split('/')[4];
+if (postal_code) {
+    loadBloc(map, postal_code + '_bloc_eclairage_public.json')
+}
+
+const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: attribution }).addTo(map);
+
+addGeoJSONLayer(map);
+
+var timeDimensionControl = new L.Control.TimeDimensionCustom(
+    {
+        timeSliderDragUpdate: true,
+        position: 'bottomleft',
+        loopButton: false,
+        autoPlay: false,
+        minSpeed: 0.1,
+        maxSpeed: 1,
+        playerOptions: {
+            loop: true
+        }
+    }
+);
+map.addControl(timeDimensionControl);
+
+let request = new Request('http://127.0.0.1:8000/maps/api/file/all_city_delimitations.json', {
+    method: 'GET',
+    headers: new Headers(),
+    })
+
+fetch(request)
+.then((resp) => resp.json())
+.then((data) => {
+    var city_center = [45.1800301, 5.6992145];
+    for (city of data.elements) {
+        if (city.tags['addr:postcode'] == postal_code) {
+            map.panTo([city.lat, city.lon]);
+            break;
+        }
+    }
+})
+
 
 var colorNameToRGB = {
     Yellow: '#FFFF00',
@@ -44,7 +89,7 @@ var colorNameToRGB = {
     LawnGreen: '#7CFC00',
 }
 
-function loadBloc(fileName) {
+function loadBloc(map, fileName) {
     let request = new Request('http://127.0.0.1:8000/maps/api/file/' + fileName, {
         method: 'GET',
         headers: new Headers(),
@@ -66,40 +111,8 @@ function loadBloc(fileName) {
     });
 }
 
-if (postal_code) {
-    loadBloc(postal_code + '_bloc_eclairage_public.json')
-}
-
-const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: attribution }).addTo(map);
-
 function addGeoJSONLayer(map) {
-    var geoJSONLayer = L.geoJSON({features: []});
-    var soda = L.timeDimension.layer.sodaHeatMap(geoJSONLayer);
+    let geoJSONLayer = L.geoJSON({features: []});
+    let soda = L.timeDimension.layer.sodaHeatMap(geoJSONLayer);
     soda.addTo(map);
 };
-
-addGeoJSONLayer(map);
-
-var days_fr = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
-
-L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
-    _getDisplayDateFormat: function(date){
-        return days_fr[date.getDay()] + ' ' + date.getHours() + 'h';
-    }
-});
-
-var timeDimensionControl = new L.Control.TimeDimensionCustom(
-    {
-        timeSliderDragUpdate: true,
-        position: 'bottomleft',
-        loopButton: false,
-        autoPlay: false,
-        minSpeed: 0.1,
-        maxSpeed: 1,
-        playerOptions: {
-            loop: true
-        }
-    }
-);
-map.addControl(this.timeDimensionControl);

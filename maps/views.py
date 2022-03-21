@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render
 from django.urls.base import reverse
-from maps.models import influencers_queryset, conflicts_queryset
+from maps.models import influencers_queryset, conflicts_queryset, City
 from django.http import JsonResponse
 from entities.time import date_check
 import timeit
@@ -89,3 +89,13 @@ def redirect_last_page_or_home(request: WSGIRequest) -> HttpResponse:
 
 def go_home(request: WSGIRequest, *args) -> HttpResponse:
     return render(request, 'templates/layouts/base.html', context={'msgs': args})
+
+
+def city_choice(request: WSGIRequest) -> HttpResponse:
+    city_name = set()
+    city_postal_code = set()
+    for city in City.objects.all():
+        city_name.add(city.name)
+        city_postal_code.add(city.postal_code)
+
+    return JsonResponse({'choices': list(city_name) + list(city_postal_code)})

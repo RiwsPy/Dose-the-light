@@ -1,3 +1,5 @@
+{% load static %}
+
 <form action="{% url 'home' %}" method="get">
     <div class="row">
         <div class="column">
@@ -13,10 +15,9 @@
                 required
                 spellcheck="false">
             <datalist id="postal_code_choice">
-               <option value="38170">
-               <option value="Seyssinet-Pariset">
-           </datalist>
+            </datalist>
             <button id="search_button" type="submit" class="btn btn-outline-success">Accéder à la carte</button>
         </div>
     </div>
 </form>
+<script src="{% static 'js/datalistValues.js' %}"></script>

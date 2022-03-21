@@ -20,9 +20,12 @@ def show_map(request, postal_code: int = 38170):
 
 
 def show_json(request, filename: str):
-    print(filename)
-    with open(os.path.join(BASE_DIR, f'db/{filename}'), 'r') as file:
-        return JsonResponse(json.load(file))
+    try:
+        with open(os.path.join(BASE_DIR, f'db/{filename}'), 'r') as file:
+            return JsonResponse(json.load(file))
+    except FileNotFoundError:
+        pass
+    return JsonResponse({'features': []})
 
 
 days = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su']

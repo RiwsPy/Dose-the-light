@@ -4,12 +4,14 @@ from django.core.handlers.wsgi import WSGIRequest
 from django.http.response import HttpResponse
 from django.core.exceptions import ObjectDoesNotExist
 from maps.models import City
+from urllib.parse import urlencode
 
 NB_FAVORITE_CITIES = 3
 
 
 def home(request: WSGIRequest, *args) -> HttpResponse:
     error_msg = ''
+    user_search_city = None
 
     if request.method == 'GET':
         user_search = request.GET.get('user_search', '')
@@ -36,9 +38,13 @@ def home(request: WSGIRequest, *args) -> HttpResponse:
     else:
         error_msg = 'Méthode non autorisée.'
 
-    if error_msg:
+    if error_msg or not user_search_city:
         return home(request, error_msg)
 
     user_search_city.nb_click += 1
     user_search_city.save()
-    return redirect('maps', user_search_city.postal_code)
+    url = reverse('maps')
+    url += '?' + urlencode({'postal_code': user_search_city.postal_code})
+    url += '&' + urlencode({'lat': user_search_city.position[0]})
+    url += '&' + urlencode({'lon': user_search_city.position[1]})
+    return redirect(url)

@@ -3,7 +3,7 @@
         <p>Les plus visitées :</p>
         {% for city in cities %}
             <div class="col-lg-4 col-md-6 col-xs-12">
-                <a href="/maps/{{ city.postal_code }}">
+                <a href="/?user_search={{ city.postal_code }}">
                     <div class="city_presentation">
                         <p>{{ city.name }}</p>
                         {% if city.img_file %}

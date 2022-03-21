@@ -6,10 +6,15 @@ L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
     }
 });
 
+let urlParams = new URL(window.location.href).searchParams;
+var postal_code = urlParams.get('postal_code');
+var city_center = [parseFloat(urlParams.get('lat')), parseFloat(urlParams.get('lon'))];
+console.log(city_center);
+
 var map = L.map('city_map', {
     zoom: 16,
     minZoom: 15,
-    center: [45.1800301, 5.6992145],
+    center: city_center,
     timeDimension: true,
     timeDimensionOptions: {
         timeInterval: "2023-02-06/P7D",
@@ -25,7 +30,6 @@ map.addControl(new L.Control.Fullscreen({
     }
 }));
 
-var postal_code = window.location.href.split('/')[4];
 if (postal_code) {
     loadBloc(map, postal_code + '_bloc_eclairage_public.json')
 }
@@ -49,23 +53,6 @@ var timeDimensionControl = new L.Control.TimeDimensionCustom(
     }
 );
 map.addControl(timeDimensionControl);
-
-let request = new Request('http://127.0.0.1:8000/maps/api/file/all_city_delimitations.json', {
-    method: 'GET',
-    headers: new Headers(),
-    })
-
-fetch(request)
-.then((resp) => resp.json())
-.then((data) => {
-    var city_center = [45.1800301, 5.6992145];
-    for (city of data.elements) {
-        if (city.tags['addr:postcode'] == postal_code) {
-            map.panTo([city.lat, city.lon]);
-            break;
-        }
-    }
-})
 
 
 var colorNameToRGB = {
@@ -98,6 +85,10 @@ function loadBloc(map, fileName) {
     fetch(request)
     .then((resp) => resp.json())
     .then((data) => {
+        if (data.features.length == 0) {
+            return;
+        }
+
         let blocLayer = new L.FeatureGroup();
         L.geoJSON(data, {
             style: function (feature) {

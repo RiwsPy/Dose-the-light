@@ -12,7 +12,8 @@ var city_center = [parseFloat(urlParams.get('lat')), parseFloat(urlParams.get('l
 console.log(city_center);
 
 var map = L.map('city_map', {
-    zoom: 16,
+    zoom: 15,
+    maxZoom: 17,
     minZoom: 15,
     center: city_center,
     timeDimension: true,
@@ -29,6 +30,29 @@ map.addControl(new L.Control.Fullscreen({
         'true': 'Quitter le plein écran'
     }
 }));
+
+var legendData = {
+    white:  "tout va bien",
+    violet: "0 < I < 0.2",
+    blue:   "0.2 < I < 0.4",
+    green:  "0.4 <= I < 0.6",
+    yellow: "0.6 <= I < 0.8",
+    orange: "0.8 <= I < 1",
+    red:    "I >= 1",
+};
+
+// Active legend
+var legend = L.control({ position: "bottomright" });
+
+legend.onAdd = function(map) {
+    var div = L.DomUtil.create("div", "legend");
+    div.innerHTML += "<h4>Intensité (I)</h4>"
+    for (let [color, txt] of Object.entries(legendData)) {
+        div.innerHTML += '<i style="background: ' + color + '"></i><span>' + txt + '</span><br>'
+    }
+    return div;
+};
+legend.addTo(this.map);
 
 if (postal_code) {
     loadBloc(map, postal_code + '_bloc_eclairage_public.json')

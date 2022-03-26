@@ -134,19 +134,19 @@ class Node(models.Model):
 
         return False
 
-    def coef_rush(self, date: re.Match) -> int:
+    def coef_rush(self, date: re.Match) -> float:
         if self.in_rush_hour(date):
             if self.landuse == "residential" or self.is_school_building:
-                return 20
-            return 5
+                return 1
+            return 0.25
         if self.is_open(date):
             if self.shop == 'supermarket' or self.amenity == 'marketplace':
-                return 3
+                return 0.15
             elif self.is_always_open:
-                return 2
-            return 1
+                return 0.1
+            return 0.05
 
-        return int(self.is_open_or_on_break(date))
+        return int(self.is_open_or_on_break(date))*0.05
 
     @property
     def is_school_building(self) -> bool:

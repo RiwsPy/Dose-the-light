@@ -29,9 +29,9 @@ L.TimeDimension.Layer.SODAHeatMap = L.TimeDimension.Layer.extend({
 
         let new_layer = L.heatLayer(heatMapData, {
             maxZoom: 17,
-            radius: 30,
+            radius: 25,
             max: 1.0,
-            blur: 20,
+            blur: 0,
             gradient: {
                 0.0: 'violet',
                 0.20: 'blue',

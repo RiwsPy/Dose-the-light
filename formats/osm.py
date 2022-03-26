@@ -11,9 +11,6 @@ class f_osm(base):
                          f' The data is made available under {self.DB_LICENSE}.'
         super().__init__()
 
-    def mod_to_osm(self):
-        return self
-
     @property
     def __dict__(self) -> dict:
         cpy = super().__dict__.copy()

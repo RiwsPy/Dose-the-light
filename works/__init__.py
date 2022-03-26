@@ -69,24 +69,24 @@ class Works(dict):
     def update(self, **kwargs) -> None:
         super().update(convert_geojson_to_osm(kwargs))
 
-    def load(self, filename='') -> None:
+    def load(self, filename: str = '') -> None:
         with open(os.path.join(BASE_DIR, 'db/' + (filename or self.filename) + self.file_ext), 'r') as file:
             self.update(**json.load(file))
 
-    def dump(self, filename='') -> None:
+    def dump(self, filename: str = '') -> None:
         with open(os.path.join(BASE_DIR, 'db/' + (filename or self.filename) + self.file_ext), 'w') as file:
             json.dump(self, file, ensure_ascii=False, indent=1)
 
-    def output(self, filename='') -> None:
+    def output(self, filename: str = '', **kwargs) -> None:
         new_f = self.__class__()
         new_f.update(**self)
         new_f[self.data_attr] = \
             [obj
              for obj in self.iter_point
-             if self._can_be_output(obj)]
+             if self._can_be_output(obj, **kwargs)]
         new_f.dump(filename)
 
-    def _can_be_output(self, obj) -> bool:
+    def _can_be_output(self, obj, **kwargs) -> bool:
         return obj.get('tags', {}).get('name')
 
 

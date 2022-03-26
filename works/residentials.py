@@ -14,5 +14,5 @@ class Residentials(Works):
         (._;>;);
         """
 
-    def _can_be_output(self, obj) -> bool:
+    def _can_be_output(self, obj, **kwargs) -> bool:
         return obj.get('tags', {}).get('landuse') == 'residential'

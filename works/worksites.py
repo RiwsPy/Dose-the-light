@@ -8,7 +8,7 @@ class Worksites(Works):
     call_method = Gam().call
     url = 'opendata/Metro/ArretesEspacePublique/json/ARRETES_ESP_PUBLIQUE_VDG_EPSGE4326.json'
 
-    def _can_be_output(self, obj) -> bool:
+    def _can_be_output(self, obj, **kwargs) -> bool:
         begin_date = date_to_int(obj['tags']['Datedebtravaux'])
         end_date = date_to_int(obj['tags']['Datefintravaux'])
         return obj['tags']['ImpactCirculation'] and begin_date <= now() <= end_date

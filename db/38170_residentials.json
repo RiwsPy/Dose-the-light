@@ -1,0 +1,214 @@
+{
+ "version": 0.6,
+ "generator": "Overpass API 0.7.57.1 74a55df1",
+ "osm3s": {
+  "timestamp_osm_base": "2022-03-17T09:36:11Z",
+  "timestamp_areas_base": "2022-03-17T04:49:53Z",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+ },
+ "elements": [
+  {
+   "type": "node",
+   "id": 190868502,
+   "tags": {
+    "landuse": "residential",
+    "name": "Lotissement Les Cyclamens"
+   },
+   "lat": 45.173147732653064,
+   "lon": 5.6929456040816335
+  },
+  {
+   "type": "node",
+   "id": 205695392,
+   "tags": {
+    "landuse": "residential",
+    "name": "Les Gentianes"
+   },
+   "lat": 45.17385672,
+   "lon": 5.69868874
+  },
+  {
+   "type": "node",
+   "id": 205695393,
+   "tags": {
+    "fenced": "no",
+    "landuse": "residential",
+    "name": "Résidence l'Île Bleue"
+   },
+   "lat": 45.17513265555555,
+   "lon": 5.6997099111111105
+  },
+  {
+   "type": "node",
+   "id": 205816498,
+   "tags": {
+    "landuse": "residential",
+    "name": "Résidence Villa Hugo"
+   },
+   "lat": 45.174316700000006,
+   "lon": 5.698058371428572
+  },
+  {
+   "type": "node",
+   "id": 206456434,
+   "tags": {
+    "landuse": "residential",
+    "name": "Les Balmes Nord"
+   },
+   "lat": 45.186228607407415,
+   "lon": 5.6966787685185185
+  },
+  {
+   "type": "node",
+   "id": 211045977,
+   "tags": {
+    "landuse": "residential",
+    "name": "Résidence Les Roches Bleues"
+   },
+   "lat": 45.179564060000004,
+   "lon": 5.6883384
+  },
+  {
+   "type": "node",
+   "id": 309822649,
+   "tags": {
+    "landuse": "residential"
+   },
+   "lat": 45.17006531923078,
+   "lon": 5.67337731923077
+  },
+  {
+   "type": "node",
+   "id": 315026159,
+   "tags": {
+    "landuse": "residential"
+   },
+   "lat": 45.17740061111112,
+   "lon": 5.658713327777779
+  },
+  {
+   "type": "node",
+   "id": 344346798,
+   "tags": {
+    "landuse": "residential"
+   },
+   "lat": 45.171230928571426,
+   "lon": 5.665918835714286
+  },
+  {
+   "type": "node",
+   "id": 344346812,
+   "tags": {
+    "landuse": "residential"
+   },
+   "lat": 45.17431687659575,
+   "lon": 5.662681721276596
+  },
+  {
+   "type": "node",
+   "id": 344346819,
+   "tags": {
+    "landuse": "residential"
+   },
+   "lat": 45.175152868115944,
+   "lon": 5.65749741884058
+  },
+  {
+   "type": "node",
+   "id": 344346821,
+   "tags": {
+    "landuse": "residential"
+   },
+   "lat": 45.17088659090909,
+   "lon": 5.6673041363636365
+  },
+  {
+   "type": "node",
+   "id": 344346822,
+   "tags": {
+    "landuse": "residential"
+   },
+   "lat": 45.172827379999994,
+   "lon": 5.6646610299999995
+  },
+  {
+   "type": "node",
+   "id": 344352950,
+   "tags": {
+    "landuse": "residential"
+   },
+   "lat": 45.17406790097089,
+   "lon": 5.685951080582526
+  },
+  {
+   "type": "node",
+   "id": 344352951,
+   "tags": {
+    "landuse": "residential"
+   },
+   "lat": 45.17499425161291,
+   "lon": 5.681222938709679
+  },
+  {
+   "type": "node",
+   "id": 344353210,
+   "tags": {
+    "landuse": "residential"
+   },
+   "lat": 45.16788014090909,
+   "lon": 5.667201168181818
+  },
+  {
+   "type": "node",
+   "id": 344353211,
+   "tags": {
+    "landuse": "residential"
+   },
+   "lat": 45.16643839000001,
+   "lon": 5.66799679
+  },
+  {
+   "type": "node",
+   "id": 344354903,
+   "tags": {
+    "landuse": "residential"
+   },
+   "lat": 45.16814975333333,
+   "lon": 5.651915813333333
+  },
+  {
+   "type": "node",
+   "id": 694482430,
+   "tags": {
+    "capacity": "8",
+    "landuse": "residential",
+    "name": "Aire d'accueil des gens du voyage des Perrières",
+    "residential": "halting_site"
+   },
+   "lat": 45.1797388,
+   "lon": 5.685393725
+  },
+  {
+   "type": "node",
+   "id": 855103278,
+   "tags": {
+    "barrier": "fence",
+    "landuse": "residential",
+    "residential": "halting_site"
+   },
+   "lat": 45.170851666666664,
+   "lon": 5.671922583333333
+  },
+  {
+   "type": "node",
+   "id": 1015568860,
+   "tags": {
+    "barrier": "fence",
+    "landuse": "residential",
+    "name": "Le Grand Pré"
+   },
+   "lat": 45.170985327272724,
+   "lon": 5.693546327272727
+  }
+ ]
+}

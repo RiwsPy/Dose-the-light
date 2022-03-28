@@ -1,0 +1,1449 @@
+{
+ "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+ "elements": [
+  {
+   "type": "node",
+   "lon": 5.71686263588198,
+   "lat": 45.1630676920796,
+   "id": 1000030,
+   "tags": {
+    "NumChantier": "DAET22-00241",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "4",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2022-02-21",
+    "Datefinarr": "2022-04-01",
+    "Datedebtravaux": "2022-02-17",
+    "Datefintravaux": "2022-03-13",
+    "Commentaires": "G1 sur voie structurante, de transit et de liaison,Réseau gaz : entretien/rénovation",
+    "ImpactCirculation": "Alternat à feux,Chaussée rétrécie,Insertion des cycles dans la circulation générale,Vitesse limitée à 30 Km/h"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.71172708611352,
+   "lat": 45.1884303127322,
+   "id": 1000031,
+   "tags": {
+    "NumChantier": "DAET22-00236",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "1",
+    "Entreprise": "ORANGE Régiment du Génie",
+    "Datedebutarr": "2022-02-07",
+    "Datefinarr": "2022-02-22",
+    "Datedebtravaux": "2022-01-27",
+    "Datefintravaux": "2022-07-01",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,Réseau de télécommunication : entretien/rénovation",
+    "ImpactCirculation": "Travaux autorisés seulement entre 9h00 et 16h00"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.73837714503665,
+   "lat": 45.199928898207,
+   "id": 1000032,
+   "tags": {
+    "NumChantier": "DAET22-00226",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "2",
+    "Entreprise": "SPL EAUX DE GRENOBLE-ALPES",
+    "Datedebutarr": "2022-02-22",
+    "Datefinarr": "2022-03-11",
+    "Datedebtravaux": "2022-02-22",
+    "Datefintravaux": "2022-05-20",
+    "Commentaires": "G3 sur voie de desserte avec revêtement en enrobé,Réseau d'eau : création/suppression",
+    "ImpactCirculation": "Chaussée rétrécie,Rue barrée"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.70234889914221,
+   "lat": 45.203687826646,
+   "id": 1000036,
+   "tags": {
+    "NumChantier": "DAET22-00213",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "1",
+    "Entreprise": "GRENOBLE-ALPES METROPOLE (Maîtrise d'Ouvrage)",
+    "Datedebutarr": "2022-02-21",
+    "Datefinarr": "2022-03-14",
+    "Datedebtravaux": "2022-02-10",
+    "Datefintravaux": "2022-09-16",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,Réseau de télécommunication : création/suppression",
+    "ImpactCirculation": "Mesures de circulation"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.73716453187502,
+   "lat": 45.1761996962657,
+   "id": 1000048,
+   "tags": {
+    "NumChantier": "DAET22-00156",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "4",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2022-02-10",
+    "Datefinarr": "2022-03-05",
+    "Datedebtravaux": "2022-02-14",
+    "Datefintravaux": "2022-05-30",
+    "Commentaires": "G1 sur voie structurante, de transit et de liaison,Réseau électrique : entretien/rénovation",
+    "ImpactCirculation": "Fermeture de la piste cyclable,Fermeture de trottoir"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.72040372955726,
+   "lat": 45.1702057487968,
+   "id": 1000049,
+   "tags": {
+    "NumChantier": "DAET22-00155",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "4",
+    "Entreprise": "COMPAGNIE DE CHAUFFAGE INTERCOMMUNALE",
+    "Datedebutarr": "2022-02-14",
+    "Datefinarr": "2022-03-04",
+    "Datedebtravaux": "2022-02-09",
+    "Datefintravaux": "2022-06-24",
+    "Commentaires": "G3 sur voie de desserte avec revêtement en enrobé,G5 sur trottoir, allée piétonne...,Réseau de chauffage : création/suppression",
+    "ImpactCirculation": "Alternat à sens prioritaire (panneaux B15 et C18),Alternat à vue,Chaussée rétrécie,Fermeture de trottoir"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.70731941037227,
+   "lat": 45.1777074253101,
+   "id": 1000051,
+   "tags": {
+    "NumChantier": "DAET22-00145",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "3",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2022-02-14",
+    "Datefinarr": "2022-05-31",
+    "Datedebtravaux": "2022-02-08",
+    "Datefintravaux": "2022-09-30",
+    "Commentaires": "G3 sur voie de desserte avec revêtement en enrobé,G5 sur trottoir, allée piétonne...,Réseau gaz : entretien/rénovation",
+    "ImpactCirculation": "Alternat à sens prioritaire (panneaux B15 et C18),Alternat à vue,Chaussée rétrécie,Fermeture de trottoir"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.71274709377903,
+   "lat": 45.1776842973758,
+   "id": 1000055,
+   "tags": {
+    "NumChantier": "DAET22-00138",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "3",
+    "Entreprise": "COMPAGNIE DE CHAUFFAGE INTERCOMMUNALE",
+    "Datedebutarr": "2022-01-24",
+    "Datefinarr": "2022-02-25",
+    "Datedebtravaux": "2022-01-18",
+    "Datefintravaux": "2022-07-01",
+    "Commentaires": "G3 sur voie de desserte avec revêtement en enrobé,G5 sur trottoir, allée piétonne...,Réseau de chauffage : création/suppression",
+    "ImpactCirculation": "Alternat à vue,Chaussée rétrécie"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.73758697956164,
+   "lat": 45.1979678242593,
+   "id": 1000057,
+   "tags": {
+    "NumChantier": "DAET22-00125",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "2",
+    "Entreprise": "ORANGE (Saint Priest)",
+    "Datedebutarr": "2022-02-10",
+    "Datefinarr": "2022-02-25",
+    "Datedebtravaux": "2022-02-04",
+    "Datefintravaux": "2022-04-15",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,Réseau de télécommunication : entretien/rénovation",
+    "ImpactCirculation": "Déviation des piétons"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.7263256414441,
+   "lat": 45.1940995219205,
+   "id": 1000072,
+   "tags": {
+    "NumChantier": "DAET22-00084",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "2",
+    "Entreprise": "ORANGE (Saint Priest)",
+    "Datedebutarr": "2022-02-10",
+    "Datefinarr": "2022-02-25",
+    "Datedebtravaux": "2022-02-01",
+    "Datefintravaux": "2022-03-25",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,Réseau de télécommunication : entretien/rénovation",
+    "ImpactCirculation": "Déviation des piétons"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.72518192024912,
+   "lat": 45.1907507461357,
+   "id": 1000077,
+   "tags": {
+    "NumChantier": "DAET22-00080",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "2",
+    "Entreprise": "ORANGE (Saint Priest)",
+    "Datedebutarr": "2022-02-21",
+    "Datefinarr": "2022-03-04",
+    "Datedebtravaux": "2022-02-01",
+    "Datefintravaux": "2022-04-22",
+    "Commentaires": "G3 sur voie de desserte avec revêtement en enrobé,Réseau de télécommunication : création/suppression",
+    "ImpactCirculation": "Chaussée rétrécie"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.72739547710212,
+   "lat": 45.1836928578828,
+   "id": 1000082,
+   "tags": {
+    "NumChantier": "DAET22-00057",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "2",
+    "Entreprise": "SPL EAUX DE GRENOBLE-ALPES",
+    "Datedebutarr": "2022-02-14",
+    "Datefinarr": "2022-02-25",
+    "Datedebtravaux": "2022-02-07",
+    "Datefintravaux": "2022-04-29",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,Réseau d'eau : entretien/rénovation",
+    "ImpactCirculation": "Déviation des piétons"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.710732936696,
+   "lat": 45.1785731597347,
+   "id": 1000083,
+   "tags": {
+    "NumChantier": "DAET22-00055",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "3",
+    "Entreprise": "SPL EAUX DE GRENOBLE-ALPES",
+    "Datedebutarr": "2022-02-16",
+    "Datefinarr": "2022-03-04",
+    "Datedebtravaux": "2022-01-26",
+    "Datefintravaux": "2022-05-27",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,Réseau assainissement : création/suppression",
+    "ImpactCirculation": "Fermeture de trottoir"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.71100930879647,
+   "lat": 45.1738294754984,
+   "id": 1000085,
+   "tags": {
+    "NumChantier": "DAET22-00049",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "3",
+    "Entreprise": "SPL EAUX DE GRENOBLE-ALPES",
+    "Datedebutarr": "2022-01-31",
+    "Datefinarr": "2022-02-11",
+    "Datedebtravaux": "2022-01-13",
+    "Datefintravaux": "2022-04-29",
+    "Commentaires": "G3 sur voie de desserte avec revêtement en enrobé,Réseau d'eau : entretien/rénovation",
+    "ImpactCirculation": "Alternat à sens prioritaire (panneaux B15 et C18),Chaussée rétrécie"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.7162458297442,
+   "lat": 45.1618253556693,
+   "id": 1000088,
+   "tags": {
+    "NumChantier": "DAET22-00044",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "4",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2022-01-24",
+    "Datefinarr": "2022-02-04",
+    "Datedebtravaux": "2022-01-28",
+    "Datefintravaux": "2022-04-28",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,Réseau électrique : création/suppression",
+    "ImpactCirculation": "Chaussée rétrécie"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.70728280988322,
+   "lat": 45.1787739660712,
+   "id": 1000089,
+   "tags": {
+    "NumChantier": "DAET22-00040",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "3",
+    "Entreprise": "GRENOBLE HABITAT",
+    "Datedebutarr": "2022-01-17",
+    "Datefinarr": "2022-01-21",
+    "Datedebtravaux": "2022-01-06",
+    "Datefintravaux": "2022-07-01",
+    "Commentaires": "G2 sur voie de distribution,G3 sur voie de desserte avec revêtement en enrobé,G5 sur trottoir, allée piétonne...,Réseau assainissement : création/suppression",
+    "ImpactCirculation": "Circulation interdite sauf riverains, services publics et secours,Fermeture de trottoir"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.72642325813304,
+   "lat": 45.1719617151561,
+   "id": 1000093,
+   "tags": {
+    "NumChantier": "DAET22-00031",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "4",
+    "Entreprise": "SPL EAUX DE GRENOBLE-ALPES",
+    "Datedebutarr": "2022-02-07",
+    "Datefinarr": "2022-02-25",
+    "Datedebtravaux": "2022-02-07",
+    "Datefintravaux": "2022-04-30",
+    "Commentaires": "G3 sur voie de desserte avec revêtement en enrobé,G5 sur trottoir, allée piétonne...,Réseau assainissement : création/suppression,Réseau d'eau : création/suppression",
+    "ImpactCirculation": "Alternat à sens prioritaire (panneaux B15 et C18),Chaussée rétrécie,Fermeture de trottoir"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.73383203234448,
+   "lat": 45.17740582579,
+   "id": 1000094,
+   "tags": {
+    "NumChantier": "DAET22-00029",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "4",
+    "Entreprise": "VILLE DE GRENOBLE",
+    "Datedebutarr": "2022-02-07",
+    "Datefinarr": "2022-03-05",
+    "Datedebtravaux": "2022-01-26",
+    "Datefintravaux": "2022-03-31",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,Réseau éclairage public : création/suppression",
+    "ImpactCirculation": "Chaussée rétrécie,Fermeture de trottoir"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.70846037178703,
+   "lat": 45.1804691654528,
+   "id": 1000097,
+   "tags": {
+    "NumChantier": "DAET22-00014",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "1",
+    "Entreprise": "PLURALIS HABITAT",
+    "Datedebutarr": "2022-01-17",
+    "Datefinarr": "2022-03-30",
+    "Datedebtravaux": "2022-01-04",
+    "Datefintravaux": "2022-04-29",
+    "Commentaires": "G3 sur voie de desserte avec revêtement en enrobé,G5 sur trottoir, allée piétonne...,Réseau assainissement : entretien/rénovation",
+    "ImpactCirculation": "Mesures de circulation"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.71336957660397,
+   "lat": 45.1893386469352,
+   "id": 1000100,
+   "tags": {
+    "NumChantier": "DAET21-02947",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "1",
+    "Entreprise": "GRENOBLE-ALPES METROPOLE (Maîtrise d'Ouvrage)",
+    "Datedebutarr": "2022-02-14",
+    "Datefinarr": "2022-03-18",
+    "Datedebtravaux": "2022-02-07",
+    "Datefintravaux": "2022-03-31",
+    "Commentaires": "Réseau divers,Voirie : aménagement",
+    "ImpactCirculation": "Mesures de circulation"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.72903000297004,
+   "lat": 45.1659857175336,
+   "id": 1000106,
+   "tags": {
+    "NumChantier": "DAET21-02886",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "6",
+    "Entreprise": "SPL EAUX DE GRENOBLE-ALPES",
+    "Datedebutarr": "2022-02-04",
+    "Datefinarr": "2022-05-06",
+    "Datedebtravaux": "2022-02-02",
+    "Datefintravaux": "2022-05-06",
+    "Commentaires": "G3 sur voie de desserte avec revêtement en enrobé,G5 sur trottoir, allée piétonne...,Réseau d'eau : entretien/rénovation",
+    "ImpactCirculation": "Rue barrée"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.75160285479447,
+   "lat": 45.1747995446695,
+   "id": 1000107,
+   "tags": {
+    "NumChantier": "DAET21-02884",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "5",
+    "Entreprise": "SPL EAUX DE GRENOBLE-ALPES",
+    "Datedebutarr": "2022-01-31",
+    "Datefinarr": "2022-02-11",
+    "Datedebtravaux": "2022-01-27",
+    "Datefintravaux": "2022-04-22",
+    "Commentaires": "G3 sur voie de desserte avec revêtement en enrobé,Réseau d'eau : création/suppression",
+    "ImpactCirculation": "Chaussée rétrécie"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.70750574004452,
+   "lat": 45.1756318117096,
+   "id": 1000108,
+   "tags": {
+    "NumChantier": "DAET21-02873",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "3",
+    "Entreprise": "ACTIS",
+    "Datedebutarr": "2022-01-06",
+    "Datefinarr": "2022-01-25",
+    "Datedebtravaux": "2021-12-13",
+    "Datefintravaux": "2022-07-01",
+    "Commentaires": "G3 sur voie de desserte avec revêtement en enrobé,G5 sur trottoir, allée piétonne...,Réseau assainissement : création/suppression",
+    "ImpactCirculation": "Alternat à sens prioritaire (panneaux B15 et C18),Fermeture de trottoir"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.70868068257142,
+   "lat": 45.1752027713584,
+   "id": 1000110,
+   "tags": {
+    "NumChantier": "DAET21-02842",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "3",
+    "Entreprise": "SPL EAUX DE GRENOBLE-ALPES",
+    "Datedebutarr": "2022-01-05",
+    "Datefinarr": "2022-01-14",
+    "Datedebtravaux": "2021-12-15",
+    "Datefintravaux": "2022-04-29",
+    "Commentaires": "G1 sur voie structurante, de transit et de liaison,G5 sur trottoir, allée piétonne...,Réseau d'eau : création/suppression",
+    "ImpactCirculation": "Fermeture de trottoir"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.70487784468906,
+   "lat": 45.1691293552371,
+   "id": 1000111,
+   "tags": {
+    "NumChantier": "DAET21-02839",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "3",
+    "Entreprise": "COMPAGNIE DE CHAUFFAGE INTERCOMMUNALE",
+    "Datedebutarr": "2022-01-03",
+    "Datefinarr": "2022-02-04",
+    "Datedebtravaux": "2021-12-08",
+    "Datefintravaux": "2022-05-02",
+    "Commentaires": "G1 sur voie structurante, de transit et de liaison,G5 sur trottoir, allée piétonne...,Réseau de chauffage : création/suppression",
+    "ImpactCirculation": "Alternat à feux,Insertion des cycles dans la circulation générale,Vitesse limitée à 30 Km/h"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.73180817768147,
+   "lat": 45.19157195805,
+   "id": 1000112,
+   "tags": {
+    "NumChantier": "DAET21-02837",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "2",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2022-01-25",
+    "Datefinarr": "2022-02-21",
+    "Datedebtravaux": "2022-01-10",
+    "Datefintravaux": "2022-04-10",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,Réseau gaz : création/suppression",
+    "ImpactCirculation": "Chaussée rétrécie,Déviation des piétons"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.71609134189107,
+   "lat": 45.1859146113225,
+   "id": 1000113,
+   "tags": {
+    "NumChantier": "DAET21-02832",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "1",
+    "Entreprise": "GRENOBLE-ALPES METROPOLE Régie Eau Assainissement",
+    "Datedebutarr": "2022-01-17",
+    "Datefinarr": "2022-01-31",
+    "Datedebtravaux": "2021-12-08",
+    "Datefintravaux": "2022-04-29",
+    "Commentaires": "G1 sur voie structurante, de transit et de liaison,G5 sur trottoir, allée piétonne...,Réseau assainissement : entretien/rénovation",
+    "ImpactCirculation": "Mesures de circulation"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.74447230706671,
+   "lat": 45.1882679744662,
+   "id": 1000114,
+   "tags": {
+    "NumChantier": "DAET21-02818",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "5",
+    "Entreprise": "GRENOBLE-ALPES METROPOLE Régie Eau Assainissement",
+    "Datedebutarr": "2022-01-17",
+    "Datefinarr": "2022-03-31",
+    "Datedebtravaux": "2022-01-17",
+    "Datefintravaux": "2022-03-31",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,G7 sur espaces verts,Réseau assainissement : entretien/rénovation",
+    "ImpactCirculation": "Déviation des cycles,Déviation des piétons"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.70429393432166,
+   "lat": 45.1914242999249,
+   "id": 1000115,
+   "tags": {
+    "NumChantier": "DAET21-02811",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "1",
+    "Entreprise": "BORDE Antoine",
+    "Datedebutarr": "2022-01-03",
+    "Datefinarr": "2022-01-14",
+    "Datedebtravaux": "2021-12-07",
+    "Datefintravaux": "2022-04-29",
+    "Commentaires": "G1 sur voie structurante, de transit et de liaison,G5 sur trottoir, allée piétonne...,Réseau assainissement : création/suppression",
+    "ImpactCirculation": "Alternat à feux,Circulation maintenue sur chaussée rétrécie,Mesures de circulation,Neutralisation d'une voie,Travaux autorisés seulement entre 9h00 et 16h00"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.73682924277964,
+   "lat": 45.1895328081627,
+   "id": 1000117,
+   "tags": {
+    "NumChantier": "DAET21-02766",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "2",
+    "Entreprise": "SIPARTECH",
+    "Datedebutarr": "2022-01-04",
+    "Datefinarr": "2022-01-28",
+    "Datedebtravaux": "2021-12-20",
+    "Datefintravaux": "2022-03-31",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,Réseau de télécommunication : création/suppression",
+    "ImpactCirculation": "Chaussée rétrécie,Fermeture de la piste cyclable à contre-sens,Fermeture de trottoir"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.73682924277964,
+   "lat": 45.1895328081627,
+   "id": 1000118,
+   "tags": {
+    "NumChantier": "DAET21-02766",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "2",
+    "Entreprise": "SIPARTECH",
+    "Datedebutarr": "2022-01-29",
+    "Datefinarr": "2022-02-18",
+    "Datedebtravaux": "2021-12-20",
+    "Datefintravaux": "2022-03-31",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,Réseau de télécommunication : création/suppression",
+    "ImpactCirculation": "Chaussée rétrécie,Fermeture de la piste cyclable à contre-sens,Fermeture de trottoir"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.70471382007654,
+   "lat": 45.1912016274338,
+   "id": 1000119,
+   "tags": {
+    "NumChantier": "DAET21-02762",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "1",
+    "Entreprise": "GRENOBLE-ALPES METROPOLE Régie Eau Assainissement",
+    "Datedebutarr": "2022-02-14",
+    "Datefinarr": "2022-04-22",
+    "Datedebtravaux": "2021-12-08",
+    "Datefintravaux": "2022-08-26",
+    "Commentaires": "G1 sur voie structurante, de transit et de liaison,G5 sur trottoir, allée piétonne...,Réseau assainissement : entretien/rénovation,Réseau d'eau : entretien/rénovation",
+    "ImpactCirculation": "Mesures de circulation"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.72660251042458,
+   "lat": 45.1722915358093,
+   "id": 1000121,
+   "tags": {
+    "NumChantier": "DAET21-02729",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "4",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2022-01-06",
+    "Datefinarr": "2022-02-28",
+    "Datedebtravaux": "2021-12-15",
+    "Datefintravaux": "2022-03-15",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,Réseau électrique : création/suppression",
+    "ImpactCirculation": "Fermeture de trottoir"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.71073166851638,
+   "lat": 45.2001187379736,
+   "id": 1000122,
+   "tags": {
+    "NumChantier": "DAET21-02725",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "1",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2022-01-13",
+    "Datefinarr": "2022-02-15",
+    "Datedebtravaux": "2021-12-15",
+    "Datefintravaux": "2022-03-15",
+    "Commentaires": "G1 sur voie structurante, de transit et de liaison,Réseau gaz : création/suppression",
+    "ImpactCirculation": "Mesures de circulation"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.7308179818012,
+   "lat": 45.1833859195294,
+   "id": 1000124,
+   "tags": {
+    "NumChantier": "DAET21-02709",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "4",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2022-01-06",
+    "Datefinarr": "2022-01-31",
+    "Datedebtravaux": "2021-12-14",
+    "Datefintravaux": "2022-03-14",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,Réseau électrique : création/suppression",
+    "ImpactCirculation": "Déviation des cycles,Déviation des piétons"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.71498839538183,
+   "lat": 45.1922868353338,
+   "id": 1000125,
+   "tags": {
+    "NumChantier": "DAET21-02684",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "1",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2021-12-03",
+    "Datefinarr": "2021-12-18",
+    "Datedebtravaux": "2021-11-23",
+    "Datefintravaux": "2022-03-09",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,Réseau électrique : création/suppression",
+    "ImpactCirculation": "Mesures de circulation"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.70773532532823,
+   "lat": 45.184048654064,
+   "id": 1000127,
+   "tags": {
+    "NumChantier": "DAET21-02669",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "1",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2022-01-06",
+    "Datefinarr": "2022-02-15",
+    "Datedebtravaux": "2021-12-08",
+    "Datefintravaux": "2022-03-08",
+    "Commentaires": "G3 sur voie de desserte avec revêtement en enrobé,G5 sur trottoir, allée piétonne...,Réseau électrique : création/suppression",
+    "ImpactCirculation": "Mesures de circulation"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.73552195203955,
+   "lat": 45.1911794710378,
+   "id": 1000128,
+   "tags": {
+    "NumChantier": "DAET21-02668",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "2",
+    "Entreprise": "SERPOLLET Dauphiné",
+    "Datedebutarr": "2022-01-30",
+    "Datefinarr": "2022-02-15",
+    "Datedebtravaux": "2021-12-08",
+    "Datefintravaux": "2022-06-01",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,Réseau de télécommunication : création/suppression",
+    "ImpactCirculation": "Déviation des piétons"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.73745389090981,
+   "lat": 45.17703678031,
+   "id": 1000129,
+   "tags": {
+    "NumChantier": "DAET21-02665",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "4",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2021-12-03",
+    "Datefinarr": "2021-12-19",
+    "Datedebtravaux": "2021-12-08",
+    "Datefintravaux": "2022-03-08",
+    "Commentaires": "G3 sur voie de desserte avec revêtement en enrobé,Réseau électrique : entretien/rénovation",
+    "ImpactCirculation": "Circulation interdite sauf riverains, services publics et secours"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.71230428411009,
+   "lat": 45.2006097448787,
+   "id": 1000132,
+   "tags": {
+    "NumChantier": "DAET21-02652",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "1",
+    "Entreprise": "VERKOR",
+    "Datedebutarr": "2022-01-17",
+    "Datefinarr": "2022-01-21",
+    "Datedebtravaux": "2021-11-15",
+    "Datefintravaux": "2022-04-01",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,Réseau de télécommunication : création/suppression",
+    "ImpactCirculation": "Mesures de circulation"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.7291699690465,
+   "lat": 45.1598560572781,
+   "id": 1000133,
+   "tags": {
+    "NumChantier": "DAET21-02649",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "6",
+    "Entreprise": "COMPAGNIE DE CHAUFFAGE INTERCOMMUNALE",
+    "Datedebutarr": "2021-11-29",
+    "Datefinarr": "2021-12-03",
+    "Datedebtravaux": "2021-11-25",
+    "Datefintravaux": "2022-04-30",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,G7 sur espaces verts,Réseau de chauffage : création/suppression,Voirie : sondage",
+    "ImpactCirculation": "Chaussée rétrécie"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.71911747855129,
+   "lat": 45.1947142969257,
+   "id": 1000134,
+   "tags": {
+    "NumChantier": "DAET21-02636",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "2",
+    "Entreprise": "GRENOBLE-ALPES METROPOLE (Maîtrise d'Ouvrage)",
+    "Datedebutarr": "2021-12-06",
+    "Datefinarr": "2021-12-17",
+    "Datedebtravaux": "2021-11-17",
+    "Datefintravaux": "2022-05-27",
+    "Commentaires": "Voirie : aménagement,Voirie : sondage,Voirie: mobilier urbain",
+    "ImpactCirculation": "Chaussée rétrécie"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.71393490864852,
+   "lat": 45.1765278736108,
+   "id": 1000137,
+   "tags": {
+    "NumChantier": "DAET21-02578",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "3",
+    "Entreprise": "NEXLOOP",
+    "Datedebutarr": "2021-11-09",
+    "Datefinarr": "2021-11-20",
+    "Datedebtravaux": "2021-11-04",
+    "Datefintravaux": "2022-04-01",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,Réseau de télécommunication : entretien/rénovation",
+    "ImpactCirculation": "Alternat à vue,Chaussée rétrécie,Fermeture de trottoir"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.70817738715759,
+   "lat": 45.1868263163593,
+   "id": 1000140,
+   "tags": {
+    "NumChantier": "DAET21-02537",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "1",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2021-11-12",
+    "Datefinarr": "2022-01-31",
+    "Datedebtravaux": "2021-11-08",
+    "Datefintravaux": "2022-03-16",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,Réseau électrique : entretien/rénovation",
+    "ImpactCirculation": "Mesures de circulation"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.7175853727057,
+   "lat": 45.1922960036816,
+   "id": 1000141,
+   "tags": {
+    "NumChantier": "DAET21-02533",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "1",
+    "Entreprise": "SMMAG",
+    "Datedebutarr": "2022-02-07",
+    "Datefinarr": "2022-02-10",
+    "Datedebtravaux": "2021-12-13",
+    "Datefintravaux": "2022-04-29",
+    "Commentaires": "G3 sur voie de desserte avec revêtement en enrobé,Voirie: mobilier urbain",
+    "ImpactCirculation": "Rue barrée"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.71140820781234,
+   "lat": 45.1769951388622,
+   "id": 1000144,
+   "tags": {
+    "NumChantier": "DAET21-02509",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "3",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2021-11-08",
+    "Datefinarr": "2021-11-26",
+    "Datedebtravaux": "2021-11-04",
+    "Datefintravaux": "2022-04-15",
+    "Commentaires": "G3 sur voie de desserte avec revêtement en enrobé,G5 sur trottoir, allée piétonne...,Réseau gaz : entretien/rénovation",
+    "ImpactCirculation": "Alternat à sens prioritaire (panneaux B15 et C18),Chaussée rétrécie,Fermeture de trottoir"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.73903116490853,
+   "lat": 45.1676532000517,
+   "id": 1000145,
+   "tags": {
+    "NumChantier": "DAET21-02480",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "5",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2021-12-03",
+    "Datefinarr": "2022-03-19",
+    "Datedebtravaux": "2021-11-10",
+    "Datefintravaux": "2022-03-10",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,Réseau électrique : entretien/rénovation",
+    "ImpactCirculation": "Fermeture de trottoir"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.70750574004452,
+   "lat": 45.1756318117096,
+   "id": 1000146,
+   "tags": {
+    "NumChantier": "DAET21-02472",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "3",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2021-11-08",
+    "Datefinarr": "2021-12-10",
+    "Datedebtravaux": "2021-10-25",
+    "Datefintravaux": "2022-04-01",
+    "Commentaires": "G3 sur voie de desserte avec revêtement en enrobé,G5 sur trottoir, allée piétonne...,Réseau électrique : entretien/rénovation",
+    "ImpactCirculation": "Fermeture de trottoir"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.7198395410991,
+   "lat": 45.1594213523629,
+   "id": 1000149,
+   "tags": {
+    "NumChantier": "DIT21-00091DAET1",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "4",
+    "Entreprise": "GRENOBLE-ALPES METROPOLE Régie Eau Assainissement",
+    "Datedebutarr": "2021-11-15",
+    "Datefinarr": "2021-12-15",
+    "Datedebtravaux": "2021-10-18",
+    "Datefintravaux": "2022-03-31",
+    "Commentaires": "Réseau d'eau : entretien/rénovation",
+    "ImpactCirculation": "Chaussée rétrécie,Neutralisation d'une voie"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.70868068257142,
+   "lat": 45.1752027713584,
+   "id": 1000150,
+   "tags": {
+    "NumChantier": "DAET21-02399",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "3",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2021-11-18",
+    "Datefinarr": "2021-12-10",
+    "Datedebtravaux": "2021-11-02",
+    "Datefintravaux": "2022-03-31",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,Réseau électrique : création/suppression",
+    "ImpactCirculation": "Chaussée rétrécie"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.70487784468906,
+   "lat": 45.1691293552371,
+   "id": 1000156,
+   "tags": {
+    "NumChantier": "DIT19-00272DAET1",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "3",
+    "Entreprise": "COMPAGNIE DE CHAUFFAGE INTERCOMMUNALE",
+    "Datedebutarr": "2022-02-07",
+    "Datefinarr": "2022-04-15",
+    "Datedebtravaux": "2021-11-08",
+    "Datefintravaux": "2022-04-01",
+    "Commentaires": "G1 sur voie structurante, de transit et de liaison,G5 sur trottoir, allée piétonne...,Réseau de chauffage : création/suppression",
+    "ImpactCirculation": "Alternat à sens prioritaire (panneaux B15 et C18),Alternat à vue,Chaussée rétrécie,Circulation à double sens"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.71196508191721,
+   "lat": 45.1825381870148,
+   "id": 1000157,
+   "tags": {
+    "NumChantier": "DAET21-02232",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "1",
+    "Entreprise": "ORANGE",
+    "Datedebutarr": "2021-10-08",
+    "Datefinarr": "2021-10-22",
+    "Datedebtravaux": "2021-10-08",
+    "Datefintravaux": "2022-04-08",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,Réseau de télécommunication : entretien/rénovation",
+    "ImpactCirculation": "Fermeture de trottoir"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.72962220978661,
+   "lat": 45.1660204593128,
+   "id": 1000158,
+   "tags": {
+    "NumChantier": "DAET21-02226",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "6",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2022-01-06",
+    "Datefinarr": "2022-02-15",
+    "Datedebtravaux": "2021-10-07",
+    "Datefintravaux": "2022-03-31",
+    "Commentaires": "G3 sur voie de desserte avec revêtement en enrobé,G5 sur trottoir, allée piétonne...,Réseau électrique : entretien/rénovation",
+    "ImpactCirculation": "Chaussée rétrécie"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.74022181441242,
+   "lat": 45.1671683204515,
+   "id": 1000159,
+   "tags": {
+    "NumChantier": "DAET21-02225",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "5",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2022-01-06",
+    "Datefinarr": "2022-02-15",
+    "Datedebtravaux": "2021-10-07",
+    "Datefintravaux": "2022-03-31",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,Réseau électrique : entretien/rénovation",
+    "ImpactCirculation": "Déviation des piétons"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.72867069857841,
+   "lat": 45.1696050659809,
+   "id": 1000160,
+   "tags": {
+    "NumChantier": "DAET21-02213",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "6",
+    "Entreprise": "LA SOLUTION TELECOM",
+    "Datedebutarr": "2022-01-04",
+    "Datefinarr": "2022-01-31",
+    "Datedebtravaux": "2022-01-03",
+    "Datefintravaux": "2022-03-31",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,Réseau de télécommunication : entretien/rénovation",
+    "ImpactCirculation": "Chaussée rétrécie"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.71332569315676,
+   "lat": 45.1968101770368,
+   "id": 1000169,
+   "tags": {
+    "NumChantier": "DAET21-02150",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "1",
+    "Entreprise": "Ensemble des autres demandeurs",
+    "Datedebutarr": "2021-11-22",
+    "Datefinarr": "2021-12-03",
+    "Datedebtravaux": "2021-09-09",
+    "Datefintravaux": "2022-03-31",
+    "Commentaires": "Entrée charretière,Voirie : aménagement",
+    "ImpactCirculation": "Mesures de circulation"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.73530869891024,
+   "lat": 45.1896951309277,
+   "id": 1000198,
+   "tags": {
+    "NumChantier": "DAET21-01609",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "2",
+    "Entreprise": "VILLE DE GRENOBLE",
+    "Datedebutarr": "2021-08-02",
+    "Datefinarr": "2021-08-06",
+    "Datedebtravaux": "2021-07-07",
+    "Datefintravaux": "2022-04-30",
+    "Commentaires": "Mobilier urbain,Voirie : aménagement,Voirie: mobilier urbain",
+    "ImpactCirculation": "Fermeture de la piste cyclable à contre-sens,Rue barrée"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.71176042340574,
+   "lat": 45.1668773730967,
+   "id": 1000205,
+   "tags": {
+    "NumChantier": "DAET21-01484",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "3",
+    "Entreprise": "SOC EQUIPEMENT DU RHONE ET DE LYON",
+    "Datedebutarr": "2021-07-13",
+    "Datefinarr": "2023-07-13",
+    "Datedebtravaux": "2021-06-21",
+    "Datefintravaux": "2023-06-23",
+    "Commentaires": "G1 sur voie structurante, de transit et de liaison,G5 sur trottoir, allée piétonne...,G7 sur espaces verts,Voirie : aménagement",
+    "ImpactCirculation": "Déviation des cycles"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.74331405504765,
+   "lat": 45.168650067539,
+   "id": 1000212,
+   "tags": {
+    "NumChantier": "DAET21-00781",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "5",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2021-05-21",
+    "Datefinarr": "2021-06-18",
+    "Datedebtravaux": "2021-04-20",
+    "Datefintravaux": "2022-04-20",
+    "Commentaires": "G7 sur espaces verts,Réseau électrique : création/suppression",
+    "ImpactCirculation": "Déviation des piétons"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.7292773946257,
+   "lat": 45.1592829043075,
+   "id": 1000215,
+   "tags": {
+    "NumChantier": "DIT19-00291DAET1",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "6",
+    "Entreprise": "COMPAGNIE DE CHAUFFAGE INTERCOMMUNALE",
+    "Datedebutarr": "2021-05-10",
+    "Datefinarr": "2021-05-21",
+    "Datedebtravaux": "2021-03-24",
+    "Datefintravaux": "2022-03-25",
+    "Commentaires": "G1 sur voie structurante, de transit et de liaison,G5 sur trottoir, allée piétonne...,G7 sur espaces verts,Réseau de chauffage : création/suppression",
+    "ImpactCirculation": "Déviation de la circulation des piétons et des cycles"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.70709888604399,
+   "lat": 45.1854596157283,
+   "id": 1000216,
+   "tags": {
+    "NumChantier": "DAET21-00669",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "1",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2021-04-08",
+    "Datefinarr": "2021-04-30",
+    "Datedebtravaux": "2021-03-18",
+    "Datefintravaux": "2022-04-06",
+    "Commentaires": "G5 sur trottoir, allée piétonne...,Réseau électrique : création/suppression",
+    "ImpactCirculation": "Chaussée rétrécie,Déviation des piétons"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.70486472782052,
+   "lat": 45.1816831212336,
+   "id": 1000218,
+   "tags": {
+    "NumChantier": "DAET21-00662",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "1",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2021-04-01",
+    "Datefinarr": "2021-04-30",
+    "Datedebtravaux": "2021-03-18",
+    "Datefintravaux": "2022-04-05",
+    "Commentaires": "G3 sur voie de desserte avec revêtement en enrobé,G5 sur trottoir, allée piétonne...,Réseau gaz : création/suppression",
+    "ImpactCirculation": "Chaussée rétrécie"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.71100635933825,
+   "lat": 45.2014243977118,
+   "id": 1000220,
+   "tags": {
+    "NumChantier": "DAET21-00593",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "1",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2021-09-16",
+    "Datefinarr": "2021-10-15",
+    "Datedebtravaux": "2021-03-18",
+    "Datefintravaux": "2022-03-30",
+    "Commentaires": "Réseau électrique : création/suppression",
+    "ImpactCirculation": "Mesures de circulation"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.74176018588893,
+   "lat": 45.1832328442295,
+   "id": 1000222,
+   "tags": {
+    "NumChantier": "DAET21-00570",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "5",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2022-02-21",
+    "Datefinarr": "2022-05-31",
+    "Datedebtravaux": "2021-03-25",
+    "Datefintravaux": "2022-03-25",
+    "Commentaires": "G2 sur voie de distribution,G3 sur voie de desserte avec revêtement en enrobé,G5 sur trottoir, allée piétonne...,Réseau électrique : création/suppression,Réseau gaz : création/suppression",
+    "ImpactCirculation": "Fermeture de la piste cyclable"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.73638040411753,
+   "lat": 45.1668940444911,
+   "id": 1000223,
+   "tags": {
+    "NumChantier": "DAET21-00569",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "5",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2021-04-01",
+    "Datefinarr": "2022-04-30",
+    "Datedebtravaux": "2021-03-25",
+    "Datefintravaux": "2022-03-25",
+    "Commentaires": "G7 sur espaces verts,Réseau électrique : création/suppression",
+    "ImpactCirculation": "Circulation interdite"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.70770343413754,
+   "lat": 45.1591569101977,
+   "id": 1000224,
+   "tags": {
+    "NumChantier": "DAET21-00552",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "3",
+    "Entreprise": "DREAL",
+    "Datedebutarr": "2021-04-12",
+    "Datefinarr": "2021-04-23",
+    "Datedebtravaux": "2021-03-03",
+    "Datefintravaux": "2024-12-27",
+    "Commentaires": "G1 sur voie structurante, de transit et de liaison,G2 sur voie de distribution,G3 sur voie de desserte avec revêtement en enrobé,G5 sur trottoir, allée piétonne...,G7 sur espaces verts,Voirie : aménagement",
+    "ImpactCirculation": "Chaussée rétrécie,Fermeture de la piste cyclable,Fermeture de trottoir,Insertion des bus dans la circulation générale,Insertion des cycles dans la circulation générale,Neutralisation d'une voie,Vitesse limitée à 30 Km/h"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.72409425634615,
+   "lat": 45.1853686504055,
+   "id": 1000226,
+   "tags": {
+    "NumChantier": "DAET21-00418",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "2",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2021-04-01",
+    "Datefinarr": "2021-04-30",
+    "Datedebtravaux": "2021-03-10",
+    "Datefintravaux": "2022-03-10",
+    "Commentaires": "G3 sur voie de desserte avec revêtement en enrobé,G5 sur trottoir, allée piétonne...,Réseau gaz : création/suppression",
+    "ImpactCirculation": "Fermeture de trottoir"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.71479644161779,
+   "lat": 45.1731775439655,
+   "id": 1000228,
+   "tags": {
+    "NumChantier": "DAET21-00394",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "3",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2021-03-15",
+    "Datefinarr": "2021-06-16",
+    "Datedebtravaux": "2021-03-09",
+    "Datefintravaux": "2022-03-16",
+    "Commentaires": "G3 sur voie de desserte avec revêtement en enrobé,G5 sur trottoir, allée piétonne...,Réseau électrique : création/suppression",
+    "ImpactCirculation": "Circulation interdite sauf riverains, services publics et secours,Rue barrée"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.71479644161779,
+   "lat": 45.1731775439655,
+   "id": 1000229,
+   "tags": {
+    "NumChantier": "DAET21-00394",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "3",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2021-03-15",
+    "Datefinarr": "2021-06-16",
+    "Datedebtravaux": "2021-03-09",
+    "Datefintravaux": "2022-03-16",
+    "Commentaires": "G3 sur voie de desserte avec revêtement en enrobé,G5 sur trottoir, allée piétonne...,Réseau électrique : création/suppression",
+    "ImpactCirculation": "Circulation interdite sauf riverains, services publics et secours,Rue barrée"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.71891573795241,
+   "lat": 45.1922500927252,
+   "id": 1000230,
+   "tags": {
+    "NumChantier": "DAET21-00359",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "1",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2022-01-30",
+    "Datefinarr": "2022-03-15",
+    "Datedebtravaux": "2021-10-19",
+    "Datefintravaux": "2022-04-29",
+    "Commentaires": "G1 sur voie structurante, de transit et de liaison,G2 sur voie de distribution,G5 sur trottoir, allée piétonne...,Réseau électrique : entretien/rénovation",
+    "ImpactCirculation": "Mesures de circulation"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.71891573795241,
+   "lat": 45.1922500927252,
+   "id": 1000231,
+   "tags": {
+    "NumChantier": "DAET21-00359",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "1",
+    "Entreprise": "GREENALP",
+    "Datedebutarr": "2021-11-04",
+    "Datefinarr": "2022-01-29",
+    "Datedebtravaux": "2021-10-19",
+    "Datefintravaux": "2022-04-29",
+    "Commentaires": "G1 sur voie structurante, de transit et de liaison,G2 sur voie de distribution,G5 sur trottoir, allée piétonne...,Réseau électrique : entretien/rénovation",
+    "ImpactCirculation": "Mesures de circulation"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.74414765526691,
+   "lat": 45.1877577787234,
+   "id": 1000239,
+   "tags": {
+    "NumChantier": "DAET20-02105",
+    "Etat": "A l'étude",
+    "Nature": "Chantier",
+    "Secteur": "5",
+    "Entreprise": "GRENOBLE-ALPES METROPOLE Régie Eau Assainissement",
+    "Datedebutarr": "2021-11-15",
+    "Datefinarr": "2022-03-31",
+    "Datedebtravaux": "2021-03-01",
+    "Datefintravaux": "2022-04-29",
+    "Commentaires": "G3 sur voie de desserte avec revêtement en enrobé,G5 sur trottoir, allée piétonne...,Réseau assainissement : entretien/rénovation",
+    "ImpactCirculation": "Alternat manuel,Chaussée rétrécie"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.74414765526691,
+   "lat": 45.1877577787234,
+   "id": 1000240,
+   "tags": {
+    "NumChantier": "DAET20-02105",
+    "Etat": "A l'étude",
+    "Nature": "Chantier",
+    "Secteur": "5",
+    "Entreprise": "GRENOBLE-ALPES METROPOLE Régie Eau Assainissement",
+    "Datedebutarr": "2021-11-15",
+    "Datefinarr": "2021-12-17",
+    "Datedebtravaux": "2021-03-01",
+    "Datefintravaux": "2022-04-29",
+    "Commentaires": "G3 sur voie de desserte avec revêtement en enrobé,G5 sur trottoir, allée piétonne...,Réseau assainissement : entretien/rénovation",
+    "ImpactCirculation": "Alternat manuel,Chaussée rétrécie"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.72987919657322,
+   "lat": 45.1901016914403,
+   "id": 1000255,
+   "tags": {
+    "NumChantier": "DAET17-01317",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "2",
+    "Entreprise": "GRENOBLE-ALPES METROPOLE (Maîtrise d'Ouvrage)",
+    "Datedebutarr": "2017-11-27",
+    "Datefinarr": "2017-12-22",
+    "Datedebtravaux": "2017-10-25",
+    "Datefintravaux": "2030-10-30",
+    "Commentaires": "Réfection trottoir,Réseau de télécommunication : création/suppression",
+    "ImpactCirculation": "Déviation des piétons,Fermeture de trottoir"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.70650122390168,
+   "lat": 45.1881349351182,
+   "id": 1000256,
+   "tags": {
+    "NumChantier": "DAET17-01240",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "1",
+    "Entreprise": "GRENOBLE-ALPES METROPOLE (Maîtrise d'Ouvrage)",
+    "Datedebutarr": "2017-12-04",
+    "Datefinarr": "2030-11-08",
+    "Datedebtravaux": "2017-10-17",
+    "Datefintravaux": "2030-10-17",
+    "Commentaires": "Réfection chaussée enrobé,Réfection trottoir,Réseau de télécommunication : création/suppression",
+    "ImpactCirculation": "Déviation de la circulation automobile. La déviation sera installée et entretenue par l'entreprise,Déviation des piétons,Fermeture de trottoir,Rue barrée"
+   }
+  },
+  {
+   "type": "node",
+   "lon": 5.70908778675779,
+   "lat": 45.1785842199232,
+   "id": 1000257,
+   "tags": {
+    "NumChantier": "DAET17-01060",
+    "Etat": "Accordé",
+    "Nature": "Chantier",
+    "Secteur": "3",
+    "Entreprise": "ORANGE",
+    "Datedebutarr": "2017-10-19",
+    "Datefinarr": "2017-11-04",
+    "Datedebtravaux": "2017-08-25",
+    "Datefintravaux": "2030-12-31",
+    "Commentaires": "Réfection chaussée enrobé,Réfection trottoir,Réseau de télécommunication : création/suppression",
+    "ImpactCirculation": "Déviation des piétons,Vitesse limitée à 30 Km/h"
+   }
+  }
+ ]
+}

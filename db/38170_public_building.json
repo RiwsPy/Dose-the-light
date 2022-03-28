@@ -1,0 +1,336 @@
+{
+ "version": 0.6,
+ "generator": "Overpass API 0.7.57.1 74a55df1",
+ "osm3s": {
+  "timestamp_osm_base": "2022-03-07T07:57:19Z",
+  "timestamp_areas_base": "2022-03-07T06:32:09Z",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+ },
+ "elements": [
+  {
+   "type": "node",
+   "id": 1999435837,
+   "lat": 45.1758121,
+   "lon": 5.6989019,
+   "tags": {
+    "amenity": "school",
+    "name": "École maternelle Chamrousse",
+    "ref:UAI": "0381563T",
+    "school:FR": "maternelle",
+    "source": "data.gouv.fr:Ministère de l'Éducation nationale, de la Jeunesse et de la Vie associative - 05/2012"
+   }
+  },
+  {
+   "type": "node",
+   "id": 1999435849,
+   "lat": 45.1762139,
+   "lon": 5.6979618,
+   "tags": {
+    "amenity": "school",
+    "name": "École primaire Chamrousse",
+    "ref:UAI": "0382328Z",
+    "school:FR": "primaire",
+    "source": "data.gouv.fr:Ministère de l'Éducation nationale, de la Jeunesse et de la Vie associative - 05/2012"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2000722802,
+   "lat": 45.1790756,
+   "lon": 5.6894224,
+   "tags": {
+    "amenity": "school",
+    "email": "Ce.0381266V@ac-grenoble.fr",
+    "name": "École maternelle Moucherotte mixte 1",
+    "phone": "+33 4 76 96 03 59",
+    "ref:UAI": "0381266V",
+    "school:FR": "maternelle",
+    "source": "data.gouv.fr:Ministère de l'Éducation nationale, de la Jeunesse et de la Vie associative - 05/2012"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2000722809,
+   "lat": 45.1796829,
+   "lon": 5.6894124,
+   "tags": {
+    "amenity": "school",
+    "email": "Ce.0382929C@ac-grenoble.fr",
+    "name": "École primaire Moucherotte",
+    "phone": "+33 4 76 96 09 57",
+    "ref:UAI": "0382929C",
+    "school:FR": "primaire",
+    "source": "data.gouv.fr:Ministère de l'Éducation nationale, de la Jeunesse et de la Vie associative - 05/2012"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2061156559,
+   "lat": 45.1708634,
+   "lon": 5.6805663,
+   "tags": {
+    "amenity": "school",
+    "email": "Ce.0381271A@ac-grenoble.fr",
+    "name": "École primaire Le Village",
+    "operator:type": "public",
+    "phone": "+33 4 76 96 66 96",
+    "ref:UAI": "0381271A",
+    "school:FR": "primaire",
+    "source": "Ministère de l'Education nationale, de la Jeunesse et de la Vie associative"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2164619592,
+   "lat": 45.1812095,
+   "lon": 5.6957886,
+   "tags": {
+    "amenity": "kindergarten",
+    "name": "Crèche familiale 1001 Pattes"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2177758411,
+   "lat": 45.1861455,
+   "lon": 5.6954543,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "9",
+    "addr:postcode": "38170",
+    "addr:street": "Allée des Balmes",
+    "amenity": "school",
+    "name": "École maternelle Vercors",
+    "ref:UAI": "0381265U",
+    "school:FR": "maternelle",
+    "source": "data.gouv.fr:Éducation Nationale - 05/2016"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2177758415,
+   "lat": 45.1860305,
+   "lon": 5.6950754,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "5",
+    "addr:postcode": "38170",
+    "addr:street": "Rue Aimé Bouchayer",
+    "amenity": "school",
+    "name": "École primaire Vercors",
+    "ref:UAI": "0382646V",
+    "school:FR": "primaire",
+    "source": "data.gouv.fr:Éducation Nationale - 05/2016"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2326713459,
+   "lat": 45.1786498,
+   "lon": 5.6951196,
+   "tags": {
+    "amenity": "fire_station",
+    "fire_station:type:FR": "CSP",
+    "name": "CSP Seyssinet-Pariset",
+    "phone": "+33 4 38 70 18 00"
+   }
+  },
+  {
+   "type": "node",
+   "id": 8572239288,
+   "lat": 45.1854556,
+   "lon": 5.6957635,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "10",
+    "addr:postcode": "38170",
+    "addr:street": "Avenue Aristide Bergès",
+    "amenity": "school",
+    "name": "Accueil périscolaire"
+   }
+  },
+  {
+   "type": "node",
+   "id": 8579729241,
+   "lat": 45.1857331,
+   "lon": 5.6957091,
+   "tags": {
+    "amenity": "school",
+    "name": "Accueil périscolaire"
+   }
+  },
+  {
+   "type": "node",
+   "id": 66182744,
+   "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "contact:phone": "+33 4 76 21 55 22",
+    "name": "Gendarmerie nationale",
+    "official_name": "Brigade de gendarmerie de Seyssinet-Pariset",
+    "opening_hours": "Mo-Sa 08:00-12:00,14:00-18:00; Su 09:00-12:00,15:00-18:00; PH 09:00-12:00,15:00-18:00",
+    "operator": "Gendarmerie nationale",
+    "operator:wikidata": "Q1422336",
+    "police:FR": "gendarmerie",
+    "ref:FR:GendarmerieNationale": "1008869",
+    "source": "data.gouv.fr:Ministère de l'Intérieur - 10/2018",
+    "wikidata": "Q77868677"
+   },
+   "lat": 45.181087166666664,
+   "lon": 5.68704238888889
+  },
+  {
+   "type": "node",
+   "id": 66184600,
+   "tags": {
+    "amenity": "kindergarten",
+    "building": "yes",
+    "name": "L'Ile aux enfants",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"
+   },
+   "lat": 45.17852788064515,
+   "lon": 5.697401938709676
+  },
+  {
+   "type": "node",
+   "id": 66184606,
+   "tags": {
+    "amenity": "place_of_worship",
+    "building": "church",
+    "denomination": "catholic",
+    "name": "Église Notre-Dame des Îles",
+    "religion": "christian",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010",
+    "wikidata": "Q41765601"
+   },
+   "lat": 45.18157843333333,
+   "lon": 5.695342644444444
+  },
+  {
+   "type": "node",
+   "id": 66185166,
+   "tags": {
+    "amenity": "school",
+    "building": "school",
+    "name": "École maternelle Chartreuse",
+    "ref:UAI": "0381857M",
+    "school:FR": "maternelle",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"
+   },
+   "lat": 45.17040961896552,
+   "lon": 5.692220015517239
+  },
+  {
+   "type": "node",
+   "id": 66185794,
+   "tags": {
+    "amenity": "place_of_worship",
+    "building": "church",
+    "denomination": "catholic",
+    "name": "Église Saint-Pierre",
+    "religion": "christian",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010",
+    "wikidata": "Q41765599"
+   },
+   "lat": 45.16873707692308,
+   "lon": 5.681031853846155
+  },
+  {
+   "type": "node",
+   "id": 66187390,
+   "tags": {
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "name": "Église de la Tour sans Venin",
+    "religion": "christian",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"
+   },
+   "lat": 45.17171602727273,
+   "lon": 5.668112736363636
+  },
+  {
+   "type": "node",
+   "id": 66187540,
+   "tags": {
+    "addr:housenumber": "15",
+    "amenity": "college",
+    "building": "yes",
+    "name": "Institut supérieur de formation de l'enseignement catholique - ISFEC des Alpes",
+    "operator:type": "private",
+    "phone": "+33 4 76 42 22 31",
+    "ref:UAI": "0383040Y",
+    "short_name": "ISFEC",
+    "source": "data.gouv.fr:Office national d'information sur les enseignements et les professions - 11/2011"
+   },
+   "lat": 45.170450535714295,
+   "lon": 5.689333171428571
+  },
+  {
+   "type": "node",
+   "id": 179601166,
+   "tags": {
+    "amenity": "school",
+    "building": "yes",
+    "name": "Collège Pierre Dubois",
+    "ref:UAI": "0380072X",
+    "school:FR": "collège",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour :2012"
+   },
+   "lat": 45.17619170941176,
+   "lon": 5.689644823529413
+  },
+  {
+   "type": "node",
+   "id": 195698899,
+   "tags": {
+    "amenity": "school",
+    "name": "Groupe scolaire du Moucherotte",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour :2012"
+   },
+   "lat": 45.17919293636363,
+   "lon": 5.689539736363637
+  },
+  {
+   "type": "node",
+   "id": 207521860,
+   "tags": {
+    "amenity": "school",
+    "name": "Groupe scolaire Vercors"
+   },
+   "lat": 45.186097294999996,
+   "lon": 5.695568742500002
+  },
+  {
+   "type": "node",
+   "id": 681360346,
+   "tags": {
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "denomination": "evangelical",
+    "name": "Église protestante évangélique de Seyssinet (EPES)",
+    "religion": "christian",
+    "short_name": "EPES",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"
+   },
+   "lat": 45.168319212499995,
+   "lon": 5.689650487500001
+  },
+  {
+   "type": "node",
+   "id": 1019466495,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "30",
+    "addr:postcode": "38170",
+    "addr:street": "Avenue Aimé Bouchayer",
+    "amenity": "school",
+    "name": "Lycée Aristide Bergès",
+    "official_name": "Lycée général et technologique Aristide Bergès",
+    "ref:UAI": "0382780R",
+    "school:FR": "lycée"
+   },
+   "lat": 45.1851001478261,
+   "lon": 5.693029669565218
+  }
+ ]
+}

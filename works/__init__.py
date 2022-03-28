@@ -18,6 +18,10 @@ class Works(dict):
     postal_code = "38170"
     skel_qt = False
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self[self.data_attr] = []
+
     def __iter__(self):
         yield from self.features
 

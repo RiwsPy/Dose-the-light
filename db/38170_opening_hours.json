@@ -1,0 +1,1267 @@
+{
+ "version": 0.6,
+ "generator": "Overpass API 0.7.57.1 74a55df1",
+ "osm3s": {
+  "timestamp_osm_base": "2022-03-07T07:57:19Z",
+  "timestamp_areas_base": "2022-03-07T06:32:09Z",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+ },
+ "elements": [
+  {
+   "type": "node",
+   "id": 1117156136,
+   "lat": 45.1791383,
+   "lon": 5.6939808,
+   "tags": {
+    "amenity": "bank",
+    "atm": "yes",
+    "brand": "Banque Populaire",
+    "brand:wikidata": "Q846647",
+    "brand:wikipedia": "fr:Banque populaire",
+    "name": "Banque Populaire des Alpes",
+    "opening_hours": "Mo-Fr 09:00-12:15,14:00-17:45",
+    "operator": "Banque Populaire"
+   }
+  },
+  {
+   "type": "node",
+   "id": 1993647371,
+   "lat": 45.1764422,
+   "lon": 5.6927665,
+   "tags": {
+    "name": "Vert tendre",
+    "opening_hours": "Mo-Fr 09:15-12:00; Tu,Th,Fr 14:30-19:00; We 15:00-19:00; Sa 09:15-12:15,15:00-19:15; Su 09:30-12:15",
+    "shop": "florist",
+    "wheelchair": "yes"
+   }
+  },
+  {
+   "type": "node",
+   "id": 1993647372,
+   "lat": 45.1766078,
+   "lon": 5.6930246,
+   "tags": {
+    "amenity": "driving_school",
+    "name": "Auto-École Réflexe",
+    "opening_hours": "Mo-Fr 17:30-19:30; Sa 14:30-18:30",
+    "phone": "+33 4 76 70 26 11",
+    "wheelchair": "yes"
+   }
+  },
+  {
+   "type": "node",
+   "id": 1993647373,
+   "lat": 45.1766561,
+   "lon": 5.6932492,
+   "tags": {
+    "amenity": "bank",
+    "atm": "yes",
+    "brand": "Crédit Agricole",
+    "brand:wikidata": "Q590952",
+    "brand:wikipedia": "fr:Crédit agricole",
+    "name": "Crédit Agricole",
+    "opening_hours": "Tu-Fr 08:30-12:00, Tu,We,Fr 14:30-18:00; Th 15:00-18:30; Sa 08:00-12:30"
+   }
+  },
+  {
+   "type": "node",
+   "id": 1993647374,
+   "lat": 45.1763265,
+   "lon": 5.692478,
+   "tags": {
+    "brand": "Casino",
+    "brand:wikidata": "Q89029184",
+    "name": "Casino",
+    "opening_hours": "Mo-Th 08:00-19:30; Fr-Sa 08:00-20:00; Su 08:30-12:30",
+    "operator": "Casino",
+    "shop": "supermarket",
+    "wheelchair": "yes"
+   }
+  },
+  {
+   "type": "node",
+   "id": 1993647376,
+   "lat": 45.1756813,
+   "lon": 5.6932532,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "64",
+    "addr:postcode": "38170",
+    "addr:street": "Rue de la Fauconnière",
+    "amenity": "pharmacy",
+    "dispensing": "yes",
+    "healthcare": "pharmacy",
+    "name": "Pharmacie de la Fauconnière",
+    "opening_hours": "Mo-Fr 08:30-12:15,14:00-19:30; Sa 08:30-12:15,14:00-19:00",
+    "ref:FR:FINESS": "380010785",
+    "ref:FR:SIRET": "49931300500013",
+    "source": "Celtipharm - 10/2014",
+    "type:FR:FINESS": "620"
+   }
+  },
+  {
+   "type": "node",
+   "id": 1993647377,
+   "lat": 45.1766233,
+   "lon": 5.6931004,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "8",
+    "addr:postcode": "38170",
+    "addr:street": "Rue de la Fauconnière",
+    "lottery": "yes",
+    "name": "Presse Papeterie Fauconniere",
+    "opening_hours": "Mo-Sa 07:00-12:00,14:00-19:00",
+    "shop": "newsagent",
+    "wheelchair": "limited"
+   }
+  },
+  {
+   "type": "node",
+   "id": 1993647378,
+   "lat": 45.176601,
+   "lon": 5.6929648,
+   "tags": {
+    "name": "Blanchisserie des écureuils",
+    "opening_hours": "Tu-Fr 08:30-12:00,14:30-18:30; Sa 09:00-12:00,15:00-18:00",
+    "phone": "+33 4 76 49 46 52",
+    "shop": "dry_cleaning",
+    "wheelchair": "yes"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2014743279,
+   "lat": 45.1755412,
+   "lon": 5.6932408,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "64",
+    "addr:postcode": "38170",
+    "addr:street": "Rue de la Fauconnière",
+    "name": "Borealyss",
+    "opening_hours": "Tu-Fr 09:00-19:00; Sa 09:00-17:00",
+    "shop": "hairdresser"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2014743280,
+   "lat": 45.1793874,
+   "lon": 5.6939234,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "2",
+    "addr:postcode": "38170",
+    "addr:street": "Avenue Victor Hugo",
+    "brand": "La Vie Claire",
+    "brand:wikidata": "Q3213589",
+    "brand:wikipedia": "fr:La Vie claire",
+    "name": "La Vie Claire",
+    "opening_hours": "Mo-Sa 08:30-20:00; Su 09:00-13:00",
+    "organic": "only",
+    "phone": "+33 4 76 21 23 86",
+    "shop": "convenience",
+    "survey:date": "2019-10-24",
+    "website": "https://magasins.lavieclaire.com/lavieclaire/fr/store/france/auvergne-rhone-alpes/isere/seyssinet-pariset/seyssinet-pariset/13813",
+    "wheelchair": "yes"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2014743281,
+   "lat": 45.1777527,
+   "lon": 5.6933016,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "18",
+    "addr:postcode": "38170",
+    "addr:street": "Avenue Victor Hugo",
+    "air_conditioning": "yes",
+    "amenity": "restaurant",
+    "cuisine": "french",
+    "internet_access": "wlan",
+    "name": "Le Cockpit",
+    "opening_hours": "Mo-Sa 12:00-14:00",
+    "phone": "+33476701640",
+    "website": "https://le-cockpit-restaurant.eatbu.com/?lang=fr",
+    "wheelchair": "yes"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2027161210,
+   "lat": 45.1799462,
+   "lon": 5.6975519,
+   "tags": {
+    "female": "yes",
+    "male": "yes",
+    "name": "Déclic Coiffure",
+    "opening_hours": "Tu-Th 08:00-12:00,14:00-19:00; Fr 08:00-19:00; Sa 07:30-16:30",
+    "phone": "+33 4 38 49 58 19",
+    "shop": "hairdresser",
+    "survey:date": "2020-01-09",
+    "unisex": "yes",
+    "wheelchair": "yes"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2027161211,
+   "lat": 45.1799493,
+   "lon": 5.6976955,
+   "tags": {
+    "name": "Emea Institut",
+    "opening_hours": "Mo 13:00-19:00; Tu-Fr 10:00-19:00; Sa 09:30-17:00",
+    "shop": "beauty",
+    "website": "http://www.emea-spa.com/"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2027161212,
+   "lat": 45.1799586,
+   "lon": 5.6973951,
+   "tags": {
+    "name": "Hidri Immo Plus",
+    "office": "estate_agent",
+    "opening_hours": "Mo-Fr 09:00-12:00, 14:00-19:00; Sa 09:00-12:00",
+    "phone": "+33 4 76 50 05 31",
+    "survey:date": "2019-10-24",
+    "website": "http://www.immoplus-hidri.com/"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2027161214,
+   "lat": 45.1799353,
+   "lon": 5.6968939,
+   "tags": {
+    "amenity": "fast_food",
+    "cuisine": "pizza",
+    "delivery": "yes",
+    "name": "Pizza Della Casa",
+    "opening_hours": "Mo-Fr 10:30-13:30, 17:30-22:30; Sa 17:30-22:30",
+    "phone": "+33 4 38 49 15 75",
+    "takeaway": "yes",
+    "website": "https://www.pizza-dellacasa.com"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2123196108,
+   "lat": 45.1766119,
+   "lon": 5.692807,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "18",
+    "addr:postcode": "38170",
+    "addr:street": "Rue de la Fauconnière",
+    "name": "Tiff'Anna",
+    "opening_hours": "Tu-Fr 10:00-19:00; Sa 10:00-16:00",
+    "shop": "hairdresser",
+    "unisex": "yes",
+    "wheelchair": "yes"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2123196111,
+   "lat": 45.1760596,
+   "lon": 5.6927947,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "40",
+    "addr:postcode": "38170",
+    "addr:street": "Rue de la Fauconnière",
+    "amenity": "library",
+    "email": "bibliotheque@seyssinet-pariset.fr",
+    "name": "Bibliothèque municipale",
+    "opening_hours": "Tu 10:00-12:00,16:00-19:00; We 09:30-12:00,15:00-18:00; Th 11:30-13:30; Fr 16:00-19:00; Sa 09:30-12:30",
+    "phone": "+33 4 76 48 16 45"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2123196113,
+   "lat": 45.1762545,
+   "lon": 5.6930415,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:postcode": "38170",
+    "addr:street": "Rue de la Fauconnière",
+    "amenity": "fast_food",
+    "cuisine": "pizza",
+    "drive_through": "no",
+    "name": "Il Gusto dell’ Italia",
+    "note": "Champion de France de pizza 2015.",
+    "opening_hours": "Mo 17:30-21:00; Tu-Sa 11:30-14:00,17:30-21:00",
+    "phone": "+33 6 42 20 68 08",
+    "website": "https://ilgustodellitalia.fr/",
+    "wheelchair": "yes"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2123196114,
+   "lat": 45.1762494,
+   "lon": 5.6932279,
+   "tags": {
+    "brand": "Krys",
+    "brand:wikidata": "Q3119538",
+    "brand:wikipedia": "fr:Krys Group",
+    "name": "Krys",
+    "opening_hours": "Mo-Sa 09:00-12:00,14:00-19:00",
+    "shop": "optician",
+    "wheelchair": "yes"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2129803446,
+   "lat": 45.1715718,
+   "lon": 5.6957554,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "8",
+    "addr:postcode": "38170",
+    "addr:street": "Avenue de Grenoble",
+    "name": "Les Halles Charly",
+    "note": "Le gérant a été élu meilleur ouvrier de France en 2015.",
+    "opening_hours": "Tu-Sa 07:30-12:15,15:30-19:15; Su 07:30-12:15",
+    "opening_hours:covid19": "open",
+    "phone": "+33 4 76 96 95 22",
+    "shop": "greengrocer",
+    "survey:date": "2021-10-12",
+    "website": "https://leshallescharly.fr",
+    "wheelchair": "yes"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2151519539,
+   "lat": 45.1803986,
+   "lon": 5.6980358,
+   "tags": {
+    "amenity": "pharmacy",
+    "check_date:opening_hours": "2021-01-02",
+    "dispensing": "yes",
+    "healthcare": "pharmacy",
+    "name": "Pharmacie Garcin",
+    "network": "PharmOffice",
+    "opening_hours": "Mo-Sa 08:00-20:00",
+    "ref:FR:FINESS": "380010835",
+    "source": "Celtipharm - 10/2014",
+    "wheelchair": "yes"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2160185789,
+   "lat": 45.1748118,
+   "lon": 5.696748,
+   "tags": {
+    "clothes": "women",
+    "name": "Au bonheur des dames",
+    "opening_hours": "Tu-Fr 10:00-12:00,14:00-19:00; Sa 10:00-16:00",
+    "phone": "04 76 96 67 40",
+    "shop": "clothes",
+    "survey:date": "2021-10-12",
+    "wheelchair": "yes"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2160185792,
+   "lat": 45.1732928,
+   "lon": 5.6970247,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "143",
+    "addr:postcode": "38170",
+    "addr:street": "Avenue de la République",
+    "name": "La Talemelerie",
+    "opening_hours": "Mo-Sa 06:30-19:30; Su 07:00-18:30",
+    "opening_hours:covid19": "open",
+    "organic": "yes",
+    "pastry_shop": "yes",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "payment:telephone_cards": "yes",
+    "phone": "+33 4 76 22 06 53",
+    "shop": "bakery",
+    "survey:date": "2021-10-12",
+    "wheelchair": "yes"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2160185795,
+   "lat": 45.1742802,
+   "lon": 5.6971261,
+   "tags": {
+    "name": "Beauté Studio",
+    "opening_hours": "Mo 14:00-19:00; Tu-Fr 09:00-12:00,14:00-19:00; Sa 09:00-12:00",
+    "phone": "+33 4 76 96 20 93",
+    "shop": "beauty",
+    "survey:date": "2021-10-12",
+    "wheelchair": "limited"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2160185798,
+   "lat": 45.1731413,
+   "lon": 5.6970267,
+   "tags": {
+    "name": "Boucherie des Îles",
+    "opening_hours": "Tu-Fr 07:00-12:30,15:30-19:15; Sa 07:00-13:00,15:00-19:00; Su 07:30-12:00",
+    "shop": "butcher",
+    "survey:date": "2021-10-12",
+    "wheelchair": "yes"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2160185802,
+   "lat": 45.1747171,
+   "lon": 5.696746,
+   "tags": {
+    "craft": "key_cutter",
+    "name": "Beau Site Multi Services",
+    "opening_hours": "Mo 14:00-19:00; Tu-Fr 08:00-12:00,14:00-19:00; Sa 08:00-15:00",
+    "phone": "04 76 96 76 73",
+    "survey:date": "2021-10-12",
+    "wheelchair": "yes"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2160185818,
+   "lat": 45.1750069,
+   "lon": 5.6967542,
+   "tags": {
+    "amenity": "pharmacy",
+    "dispensing": "yes",
+    "healthcare": "pharmacy",
+    "name": "Pharmacie du Beau Site",
+    "opening_hours": "Mo-Fr 08:30-12:15,14:00-19:15; Sa 08:30-12:15,14:00-18:00",
+    "ref:FR:FINESS": "380010850",
+    "source": "Celtipharm - 10/2014"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2160185825,
+   "lat": 45.1749108,
+   "lon": 5.6967542,
+   "tags": {
+    "female": "yes",
+    "male": "yes",
+    "name": "Aprecial",
+    "opening_hours": "Tu-Fr 09:00-19:00; Sa 09:00-17:00",
+    "phone": "+33 4 76494159",
+    "shop": "hairdresser",
+    "survey:date": "2021-10-12",
+    "wheelchair": "yes"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2160185828,
+   "lat": 45.1792358,
+   "lon": 5.6939962,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housename": "Vélosport",
+    "addr:housenumber": "4",
+    "addr:postcode": "38170",
+    "addr:street": "Avenue Victor Hugo",
+    "contact:email": "contact@velosport.fr",
+    "contact:phone": "+33 4 76 22 83 79",
+    "contact:website": "https://www.velosport.fr/",
+    "description": "Le spécialiste vélos : VTT, vélo route, VTC,vélo ville, enfant, vélo électrique",
+    "name": "Vélosport",
+    "opening_hours": "Tu-Sa 09:00-12:00,14:00-19:00",
+    "shop": "bicycle",
+    "survey:date": "2019-10-24"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2160185869,
+   "lat": 45.1746195,
+   "lon": 5.696746,
+   "tags": {
+    "amenity": "bank",
+    "atm": "yes",
+    "brand": "LCL",
+    "brand:wikidata": "Q779722",
+    "brand:wikipedia": "fr:Crédit lyonnais",
+    "name": "LCL",
+    "opening_hours": "Tu-Fr 08:30-12:00,13:30-17:45; Sa 08:30-12:00",
+    "operator": "LCL",
+    "phone": "+33 4 38 12 14 51",
+    "survey:date": "2021-10-12"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2164619601,
+   "lat": 45.1859567,
+   "lon": 5.6973086,
+   "tags": {
+    "name": "Garage Alpes Auto",
+    "opening_hours": "Mo-Su,PH 00:00-24:00",
+    "phone": "+33 4 76 53 11 34",
+    "shop": "car_repair",
+    "wheelchair": "yes"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2164619620,
+   "lat": 45.1815378,
+   "lon": 5.6972345,
+   "tags": {
+    "name": "Vue & Revue",
+    "opening_hours": "Tu-Fr 09:15-12:30, 14:15-19:00; Mo 15:00-19:00; Sa 10:00-12:30, 14:15-18:00",
+    "shop": "optician"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2166243882,
+   "lat": 45.1844989,
+   "lon": 5.6944115,
+   "tags": {
+    "addr:housenumber": "19",
+    "addr:street": "Avenue Aristide Bergès",
+    "amenity": "fast_food",
+    "contact:phone": "+33 6 24 83 83 80",
+    "cuisine": "tacos",
+    "name": "Le Comptoir",
+    "opening_hours": "Mo-Sa 10:30-23:00",
+    "wheelchair": "limited"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2190513462,
+   "lat": 45.1819307,
+   "lon": 5.692191,
+   "tags": {
+    "amenity": "fast_food",
+    "check_date:opening_hours": "2021-01-02",
+    "cuisine": "pizza",
+    "name": "Benvenuti",
+    "opening_hours": "Mo-Fr 11:30-14:30,18:00-22:30",
+    "phone": "+33 4 76 84 59 13"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2190513465,
+   "lat": 45.1820051,
+   "lon": 5.6921234,
+   "tags": {
+    "name": "D gens T",
+    "opening_hours": "Tu-Fr 09:00-19:00; Th 14:00-19:00; Sa 09:00-16:00",
+    "phone": "+33 4 76 96 19 11",
+    "shop": "hairdresser",
+    "website": "http://www.d-gens-t.com"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2190513467,
+   "lat": 45.1818447,
+   "lon": 5.692285,
+   "tags": {
+    "amenity": "restaurant",
+    "check_date:opening_hours": "2021-01-02",
+    "cuisine": "french",
+    "name": "La Noiseraie",
+    "opening_hours": "Mo-Fr 11:30-13:30",
+    "phone": "+33 4 76 84 15 27"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2210539499,
+   "lat": 45.1801066,
+   "lon": 5.6883857,
+   "tags": {
+    "amenity": "driving_school",
+    "name": "Auto-École Les Roches Bleues",
+    "opening_hours": "Mo-Fr 16:00-19:00; Sa 10:00-12:00",
+    "phone": "+33 4 76 96 83 50"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2210539508,
+   "lat": 45.1802376,
+   "lon": 5.6886127,
+   "tags": {
+    "name": "New Styl Coiffure",
+    "opening_hours": "Mo-Sa 09:00-18:00",
+    "shop": "hairdresser"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2210539509,
+   "lat": 45.180118,
+   "lon": 5.6884934,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "31bis",
+    "addr:postcode": "38170",
+    "addr:street": "Rue du Moucherotte",
+    "amenity": "pharmacy",
+    "dispensing": "yes",
+    "healthcare": "pharmacy",
+    "name": "Pharmacie des Roches Bleues",
+    "opening_hours": "Mo 14:30-19:30; Tu-Fr 08:30-12:15,14:30-19:15; Sa 08:30-12:15,14:30-17:00",
+    "phone": "04 76 96 02 76",
+    "ref:FR:FINESS": "380010801",
+    "source": "Celtipharm - 10/2014"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2976319768,
+   "lat": 45.1794757,
+   "lon": 5.6952657,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:country": "FR",
+    "addr:housenumber": "18",
+    "addr:postcode": "38170",
+    "addr:street": "Rue Lamartine",
+    "name": "La Laverie",
+    "opening_hours": "Mo-Su 06:00-21:00",
+    "phone": "+33 6 77 54 22 77",
+    "self_service": "yes",
+    "shop": "laundry",
+    "wheelchair": "yes"
+   }
+  },
+  {
+   "type": "node",
+   "id": 3188957979,
+   "lat": 45.1721997,
+   "lon": 5.6965894,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "168",
+    "addr:postcode": "38170",
+    "addr:street": "Avenue de la République",
+    "amenity": "pharmacy",
+    "dispensing": "yes",
+    "healthcare": "pharmacy",
+    "name": "Pharmacie des Charmilles",
+    "opening_hours": "Mo-Sa 08:30-12:30,14:00-19:30",
+    "operator": "Pharmacie Reynaud",
+    "ref:FR:FINESS": "380010884",
+    "ref:FR:SIRET": "38128356300017",
+    "source": "Celtipharm - 10/2014",
+    "survey:date": "2021-10-12",
+    "type:FR:FINESS": "620",
+    "wheelchair": "no"
+   }
+  },
+  {
+   "type": "node",
+   "id": 4671874493,
+   "lat": 45.1812891,
+   "lon": 5.6942134,
+   "tags": {
+    "brand": "Randstad",
+    "brand:wikidata": "Q267840",
+    "brand:wikipedia": "en:Randstad Holding",
+    "contact:city": "Seyssinet-Pariset",
+    "contact:housenumber": "52",
+    "contact:phone": "+33 4 76409319",
+    "contact:postcode": "38170",
+    "contact:street": "Rue AIME BOUCHAYER",
+    "name": "Randstad",
+    "office": "employment_agency",
+    "opening_hours": "Mo-Fr 10:00-12:00, 15:00-18:00",
+    "website": "https://www.randstad.fr/agence/944/"
+   }
+  },
+  {
+   "type": "node",
+   "id": 4996518224,
+   "lat": 45.1761748,
+   "lon": 5.692871,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "44",
+    "addr:postcode": "38170",
+    "addr:street": "Rue de la Fauconnière",
+    "craft": "caterer",
+    "cuisine": "local",
+    "email": "contact@lapartdejeanne.fr",
+    "name": "La part de jeanne",
+    "opening_hours": "Tu 9:30-14:00, 16:00-18:30; We 09:30-18:30; Th 09:30-15:30; Fr 09:30-14:00, 16:00-18:30; Sa 09:30-13:00",
+    "operator": "Yann GUERIN",
+    "phone": "+33 6 60 07 77 08",
+    "website": "https://www.lapartdejeanne.fr/wordpress/"
+   }
+  },
+  {
+   "type": "node",
+   "id": 5137791914,
+   "lat": 45.1801321,
+   "lon": 5.6928585,
+   "tags": {
+    "contact:phone": "+33 4 38 70 32 56",
+    "contact:website": "https://www.histoiredyeux.fr",
+    "description": "Optique et Audition",
+    "name": "Histoire d'yeux",
+    "opening_hours": "Tu-Sa 09:30-19:00",
+    "shop": "optician"
+   }
+  },
+  {
+   "type": "node",
+   "id": 5137791915,
+   "lat": 45.1800129,
+   "lon": 5.6928787,
+   "tags": {
+    "contact:phone": "+33 4 76 33 66 33",
+    "contact:website": "http://www.adf-38.com/",
+    "description": "Plsu de 40 ans d'aide aux familles",
+    "name": "adf38",
+    "opening_hours": "Mo-Fr 08:00-17:00",
+    "shop": "housecleaning"
+   }
+  },
+  {
+   "type": "node",
+   "id": 5205931884,
+   "lat": 45.1787718,
+   "lon": 5.6923621,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "24B",
+    "addr:postcode": "38170",
+    "addr:street": "Avenue de la Houille Blanche",
+    "name": "Graine d'Alice",
+    "opening_hours": "Mo-Sa 06:00-19:30",
+    "pastry": "yes",
+    "phone": "+334 76 22 61 07",
+    "ref:FR:NAF": "1071C",
+    "shop": "bakery",
+    "wheelchair": "yes"
+   }
+  },
+  {
+   "type": "node",
+   "id": 5331033921,
+   "lat": 45.174711,
+   "lon": 5.6867785,
+   "tags": {
+    "contact:fax": "+33 4 76842201",
+    "contact:phone": "+33 4 76842200",
+    "name": "Maif Seyssinet-Pariset",
+    "office": "insurance",
+    "opening_hours": "Mo 09:00-12:00, 13:30-16:00; Tu 10:30-12:00, 13:30-16:00; We-Fr 09:00-12:00, 13:30-16:00",
+    "website": "https://agence.maif.fr/assurance/particuliers/maif-assurances-seyssinet-pariset-id3810"
+   }
+  },
+  {
+   "type": "node",
+   "id": 5713220457,
+   "lat": 45.176463,
+   "lon": 5.6932505,
+   "tags": {
+    "amenity": "marketplace",
+    "description": "marché alimentaire, producteurs locaux et bio",
+    "name": "Marché de la Fauconnière",
+    "opening_hours": "Th 14:00-19:00",
+    "operator": "Grenoble Alpes Métropole",
+    "operator:wikidata": "Q999238",
+    "organic": "yes",
+    "source": "https://www.lametro.fr/63-les-marches-dans-la-metropole.htm"
+   }
+  },
+  {
+   "type": "node",
+   "id": 5713220458,
+   "lat": 45.1806586,
+   "lon": 5.696847,
+   "tags": {
+    "amenity": "marketplace",
+    "name": "Marché André Balme",
+    "opening_hours": "Tu,Th 07:00-12:00",
+    "operator": "Grenoble Alpes Métropole",
+    "operator:wikidata": "Q999238",
+    "source": "https://www.lametro.fr/63-les-marches-dans-la-metropole.htm"
+   }
+  },
+  {
+   "type": "node",
+   "id": 6027467879,
+   "lat": 45.1754832,
+   "lon": 5.693241,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "64",
+    "addr:postcode": "38170",
+    "addr:street": "Rue de la Fauconnière",
+    "name": "Audine",
+    "opening_hours": "Tu-Fr 09:00-12:00,14:00-19:00; Sa 09:00-12:00,14:00-18:00",
+    "shop": "beauty",
+    "wheelchair": "yes"
+   }
+  },
+  {
+   "type": "node",
+   "id": 6204167132,
+   "lat": 45.179146,
+   "lon": 5.6971957,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housename": "L'Arche",
+    "addr:housenumber": "79",
+    "addr:postcode": "38170",
+    "addr:street": "Avenue de la République",
+    "alt_name": "Repair Café",
+    "amenity": "workshop",
+    "computer:repair": "yes",
+    "contact:email": "repaircafe38170@orange.fr",
+    "contact:phone": "+33 4 38 12 00 50",
+    "contact:website": "https://seyssinetrepaircafe.wordpress.com/",
+    "craft": "electronics_repair",
+    "description": "Remettre en état tout objet de taille raisonnable : matériel audio-vidéo, petit électro-ménager, outillage électrique, matériel informatique, petites réparations sur vêtements et textiles, sur mobilier, jouets, etc.",
+    "fabrik:repair": "yes",
+    "furniture:repair": "yes",
+    "image": "http://www.ici-grenoble.org/user/mes-fichiers-a-moi/structure/709/2013-12-13-Repair-Cafe-1.jpg",
+    "mobile_phone:repair": "yes",
+    "name": "Repair Café de Seyssinet",
+    "note": "Voir https://wiki.openstreetmap.org/wiki/WikiProject_CircularEconomy pour des conseils de cartographie.",
+    "opening_hours": "We[1,3] 14:30-18:30; Sa 09:00-12:00",
+    "repair": "assisted_self_service",
+    "source": "Site internet \"ici Grenoble\" (avec son accord)"
+   }
+  },
+  {
+   "type": "node",
+   "id": 6785928900,
+   "lat": 45.1766078,
+   "lon": 5.6928642,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "16",
+    "addr:postcode": "38170",
+    "addr:street": "Rue de la Fauconnière",
+    "amenity": "fast_food",
+    "cuisine": "kebab",
+    "name": "TM Food",
+    "opening_hours": "Mo-Sa 11:00-15:00,18:30-24:00; Su 17:00-24:00",
+    "wheelchair": "limited"
+   }
+  },
+  {
+   "type": "node",
+   "id": 7810069085,
+   "lat": 45.1800391,
+   "lon": 5.6948603,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "29",
+    "addr:postcode": "38170",
+    "addr:street": "Boulevard de l'Europe",
+    "brand": "Carrefour City",
+    "brand:wikidata": "Q2940187",
+    "brand:wikipedia": "fr:Carrefour City",
+    "name": "Carrefour City",
+    "opening_hours": "Mo-Sa 07:00-22:00; Su 09:00-19:00",
+    "shop": "supermarket",
+    "survey:date": "2020-08-13",
+    "wheelchair": "yes"
+   }
+  },
+  {
+   "type": "node",
+   "id": 8721243974,
+   "lat": 45.1757493,
+   "lon": 5.6932005,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "64",
+    "addr:postcode": "38170",
+    "addr:street": "Rue de la Fauconnière",
+    "contact:email": "Labo.SEYSSINET@oriade.fr",
+    "contact:fax": "+33 4 76 21 56 38",
+    "contact:phone": "+33 4 76 49 71 72",
+    "contact:website": "https://oriade-noviale.fr/laboratoires/laboratoire-oriade-noviale-seyssinet-pariset/",
+    "description": "Laboratoire de Biologie Médicale",
+    "healthcare": "laboratory",
+    "healthcare:speciality": "biology",
+    "name": "Oriade - Laboratoire d'analyses",
+    "official_name": "LBM Oriade Noviale Seyssinet",
+    "opening_hours": "Mo-Fr 07:00-12:00,14:00-18:00; Sa 07:00-12:00",
+    "operator": "Oriade-Noviale",
+    "ref:FR:FINESS": "380017343",
+    "ref:FR:SIRET": "391 466 018 00267",
+    "source": "Le Ministère des Solidarités et de la Santé - 05/2021",
+    "type:FR:FINESS": "611"
+   }
+  },
+  {
+   "type": "node",
+   "id": 9166926319,
+   "lat": 45.1727759,
+   "lon": 5.6966999,
+   "tags": {
+    "amenity": "bank",
+    "brand": "Société Générale",
+    "brand:wikidata": "Q270363",
+    "brand:wikipedia": "en:Société Générale",
+    "name": "Société Générale",
+    "opening_hours": "Tu,Th 09:00-12:00,14:30-18:00; We,Fr 09:00-12:30,13:30-18:00; Sa 08:30-12:30",
+    "survey:date": "2021-10-12"
+   }
+  },
+  {
+   "type": "node",
+   "id": 9166926617,
+   "lat": 45.1729829,
+   "lon": 5.6967599,
+   "tags": {
+    "female": "yes",
+    "male": "yes",
+    "name": "MCII Coiffure",
+    "opening_hours": "Tu-Th 09:00-12:00,14:00-19:00; Fr 09:00-19:00; Sa 09:00-17:00",
+    "shop": "hairdresser",
+    "survey:date": "2021-10-12",
+    "wheelchair": "no"
+   }
+  },
+  {
+   "type": "node",
+   "id": 9276100234,
+   "lat": 45.17571,
+   "lon": 5.6874447,
+   "tags": {
+    "amenity": "fast_food",
+    "name": "Pizza Délice (Camion)",
+    "opening_hours": "Mo-We, Fr-Su 18:30-22:30",
+    "phone": "06 07 58 86 12"
+   }
+  },
+  {
+   "type": "node",
+   "id": 9321567495,
+   "lat": 45.1687414,
+   "lon": 5.690715,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "20",
+    "addr:postcode": "38170",
+    "addr:street": "Avenue de Grenoble",
+    "brand": "Lidl",
+    "brand:wikidata": "Q151954",
+    "brand:wikipedia": "en:Lidl",
+    "name": "Lidl",
+    "opening_hours": "Mo-Sa 08:30-19:30; Su 08:30-12:30",
+    "shop": "supermarket",
+    "wheelchair": "yes"
+   }
+  },
+  {
+   "type": "node",
+   "id": 9338108847,
+   "lat": 45.180481,
+   "lon": 5.6974564,
+   "tags": {
+    "amenity": "marketplace",
+    "name": "Marché André Balme",
+    "opening_hours": "Sa 07:00-12:00",
+    "operator": "Grenoble Alpes Métropole",
+    "operator:wikidata": "Q999238",
+    "source": "https://www.lametro.fr/63-les-marches-dans-la-metropole.htm"
+   }
+  },
+  {
+   "type": "node",
+   "id": 9416414802,
+   "lat": 45.1770836,
+   "lon": 5.6971483,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "123",
+    "addr:postcode": "38170",
+    "addr:street": "Avenue de la République",
+    "name": "Le Bleuet",
+    "opening_hours": "Mo-Fr 08:30-20:00",
+    "shop": "newsagent"
+   }
+  },
+  {
+   "type": "node",
+   "id": 9495687519,
+   "lat": 45.1807327,
+   "lon": 5.6972612,
+   "tags": {
+    "contact:city": "Seyssinet-Pariset",
+    "contact:housenumber": "67",
+    "contact:phone": "+33 4 38 70 25 81",
+    "contact:postcode": "38170",
+    "contact:street": "Avenue De La Republique",
+    "name": "Cimm Immobilier Seyssinet",
+    "office": "estate_agent",
+    "official_name": "Cimm Immobilier Seyssinet",
+    "opening_hours": "Mo-We 09:30-18:30; Th 09:30-12:00, 14:00-18:30; Fr 09:30-18:30; Sa 09:00-12:00",
+    "website": "https://seyssinet.cimm.com"
+   }
+  },
+  {
+   "type": "node",
+   "id": 9505142018,
+   "lat": 45.1719266,
+   "lon": 5.6887918,
+   "tags": {
+    "addr:postcode": "38170",
+    "email": "info@aventurenordique.com",
+    "name": "Aventure Nordique",
+    "opening_hours": "Mo-Fr 10:00-12:00, 14:00-18:00",
+    "phone": "0476397967",
+    "shop": "sports",
+    "website": "http://aventurenordique.com"
+   }
+  },
+  {
+   "type": "node",
+   "id": 66182744,
+   "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "contact:phone": "+33 4 76 21 55 22",
+    "name": "Gendarmerie nationale",
+    "official_name": "Brigade de gendarmerie de Seyssinet-Pariset",
+    "opening_hours": "Mo-Sa 08:00-12:00,14:00-18:00; Su 09:00-12:00,15:00-18:00; PH 09:00-12:00,15:00-18:00",
+    "operator": "Gendarmerie nationale",
+    "operator:wikidata": "Q1422336",
+    "police:FR": "gendarmerie",
+    "ref:FR:GendarmerieNationale": "1008869",
+    "source": "data.gouv.fr:Ministère de l'Intérieur - 10/2018",
+    "wikidata": "Q77868677"
+   },
+   "lat": 45.181087166666664,
+   "lon": 5.68704238888889
+  },
+  {
+   "type": "node",
+   "id": 66183613,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "4",
+    "addr:postcode": "38170",
+    "addr:street": "Avenue du Général de Gaulle",
+    "brand": "Citroën",
+    "brand:wikidata": "Q6746",
+    "brand:wikipedia": "fr:Citroën",
+    "building": "garage",
+    "name": "Citroën Select",
+    "opening_hours": "Mo-Fr 08:00-12:00,14:00-19:00; Sa 09:00-12:00,14:00-18:00",
+    "operator": "Citroën",
+    "shop": "car",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010",
+    "website": "https://reseau.citroen.fr/grenoble-seyssinet",
+    "wheelchair": "yes"
+   },
+   "lat": 45.177478199999996,
+   "lon": 5.6890336125
+  },
+  {
+   "type": "node",
+   "id": 66183672,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "69",
+    "addr:postcode": "38170",
+    "addr:street": "Avenue de la République",
+    "amenity": "post_office",
+    "atm": "yes",
+    "building": "yes",
+    "change_machine": "yes",
+    "copy_facility": "yes",
+    "name": "Seyssinet",
+    "opening_hours": "Mo, We-Fr 08:30-12:00, 13:30-17:30; Tu 08:30-12:00, 14:30-17:30; Sa 08:00-12:00",
+    "operator": "La Poste",
+    "operator:wikidata": "Q373724",
+    "operator:wikipedia": "fr:La Poste (entreprise française)",
+    "phone": "3631",
+    "ref:FR:LaPoste": "07281A",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010",
+    "stamping_machine": "yes",
+    "wheelchair": "yes"
+   },
+   "lat": 45.18069930999999,
+   "lon": 5.69734062
+  },
+  {
+   "type": "node",
+   "id": 66184233,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "11",
+    "addr:postcode": "38170",
+    "addr:street": "Rue de Pacalaire",
+    "building": "yes",
+    "leisure": "sports_centre",
+    "name": "ACS Squash Center",
+    "opening_hours": "Mo-Fr 10:00-23:00; Sa-Su 10:00-19:00",
+    "phone": "+33 4 76 84 51 53",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010",
+    "sport": "squash",
+    "website": "http://squashcenter.free.fr/",
+    "wheelchair": "yes"
+   },
+   "lat": 45.179678318181814,
+   "lon": 5.692847827272728
+  },
+  {
+   "type": "node",
+   "id": 66184604,
+   "tags": {
+    "amenity": "bank",
+    "atm": "yes",
+    "brand": "Caisse d'Épargne",
+    "brand:wikidata": "Q1547738",
+    "brand:wikipedia": "fr:Caisse d'épargne (banque)",
+    "building": "yes",
+    "name": "Caisse d'Épargne",
+    "opening_hours": "Tu-Fr 08:45-12:30,13:30-18:00; Th 09:30-12:30,13:30-18:00; Sa 08:45-12:30",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"
+   },
+   "lat": 45.1793911,
+   "lon": 5.696810253333333
+  },
+  {
+   "type": "node",
+   "id": 66184801,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "12",
+    "addr:postcode": "38170",
+    "addr:street": "Avenue du général de Gaulle",
+    "building": "commercial",
+    "name": "Chronodrive Seyssinet Pariset",
+    "opening_hours": "Mo-Sa 08:30-20:30; Su 09:00-12:45",
+    "operator": "Chronodrive",
+    "phone": "+334 38 12 33 11",
+    "shop": "supermarket",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010",
+    "website": "https://www.chronodrive.com/magasins-chronodrive/drive-magasin-1057-seyssinet-pariset"
+   },
+   "lat": 45.17719910909091,
+   "lon": 5.688093781818182
+  },
+  {
+   "type": "node",
+   "id": 66186127,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:country": "FR",
+    "addr:housename": "Piscine Municipale",
+    "addr:housenumber": "9",
+    "addr:postcode": "38170",
+    "addr:street": "Allée des Glycines",
+    "building": "civic",
+    "email": "piscine@seyssinet-pariset.fr",
+    "leisure": "sports_centre",
+    "length": "25",
+    "name": "Piscine municipale",
+    "opening_hours": "Tu 12:00-13:30,17:00-19:45; We 14:00-19:45; Fr 12:00-13:30,16:45-19:30; Sa 10:00-11:45,14:00-18:45",
+    "operator": "Mairie",
+    "phone": "+33 4 76 96 78 76",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2014",
+    "sport": "swimming",
+    "website": "https://www.ville-seyssinet-pariset.fr/piscine-municipale"
+   },
+   "lat": 45.17641879999999,
+   "lon": 5.691513272222221
+  },
+  {
+   "type": "node",
+   "id": 66187491,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "7",
+    "addr:postcode": "38170",
+    "addr:street": "Rue de la Levade",
+    "building": "garage",
+    "name": "Auto Distribution Isère",
+    "opening_hours": "Mo-Fr 08:00-12:00,14:00-18:00; Sa 09:00-12:00",
+    "operator": "Auto Distribution",
+    "shop": "car_repair",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"
+   },
+   "lat": 45.177620966666666,
+   "lon": 5.687762
+  },
+  {
+   "type": "node",
+   "id": 72189619,
+   "tags": {
+    "access": "yes",
+    "amenity": "parking",
+    "capacity": "75",
+    "capacity:disabled": "yes",
+    "charge": "3€30",
+    "fee": "yes",
+    "name": "P+R Seyssinet-Pariset Hôtel de Ville",
+    "network": "TAG",
+    "opening_hours": "Mo-Su 07:00-20:00",
+    "park_ride": "yes",
+    "parking": "surface",
+    "supervised": "yes"
+   },
+   "lat": 45.17984766153847,
+   "lon": 5.695772284615385
+  },
+  {
+   "type": "node",
+   "id": 205170988,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housename": "L'Arche",
+    "addr:housenumber": "79",
+    "addr:postcode": "38170",
+    "addr:street": "Avenue de la République",
+    "amenity": "community_centre",
+    "building": "civic",
+    "building:levels": "1",
+    "name": "L'Arche",
+    "opening_hours": "Mo-Th 09:00-12:00,13:30-17:30; Fr 09:00-12:00,13:30-17:00",
+    "roof:levels": "0",
+    "roof:shape": "flat"
+   },
+   "lat": 45.17914275384615,
+   "lon": 5.697432176923077
+  },
+  {
+   "type": "node",
+   "id": 302934052,
+   "tags": {
+    "addr:city": "Seyssinet-Pariset",
+    "addr:housenumber": "46",
+    "addr:postcode": "38170",
+    "addr:street": "Avenue du Vercors",
+    "building": "yes",
+    "name": "Pates & Pains Boulangerie-Tarterie",
+    "opening_hours": "Mo-Sa 07:00-19:00",
+    "shop": "bakery"
+   },
+   "lat": 45.17861312857143,
+   "lon": 5.686880342857143
+  }
+ ]
+}

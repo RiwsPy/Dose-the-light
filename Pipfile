@@ -13,6 +13,8 @@ pytest-cov = "*"
 django = "*"
 python-dotenv = "*"
 django-leaflet = "*"
+gunicorn = "*"
+supervisor = "*"
 
 [requires]
 python_version = "3.8"
